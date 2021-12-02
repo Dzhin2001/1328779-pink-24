@@ -51,19 +51,14 @@
 
 <main class="page-main">
   <div class="intro">
-    <h1 class="page-main__title">Фотографии пользователей</h1>
+    <h1  class="visually-hidden">Просмотр и загрузка фотографий.</h1>
+    <p class="intro__title">Фотографии пользователей</p>
   </div>
 
   <section class="gallery">
     <h2 class="visually-hidden">Галерея фотографий пользователей.</h2>
     <p class="gallery__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
-    <!-- удалить -->
-    <style type="text/css">
-      .gallery__list {display:grid;grid-template-columns: 300px 300px 300px;gap: 20px;}
-      .gallery__item--panorama {grid-column: 1 / 4;}
-    </style>
-    <!-- -->
 
     <ul class="gallery__list" >
       <li class="gallery__item gallery__item--panorama">
@@ -203,7 +198,7 @@
   </section>
 
   <section class="upload">
-    <h2 class="visually-hidden">Загрузка фото.</h2>
+    <h2 class="visually-hidden">Загрузка личного фото.</h2>
     <p class="upload__description">Затмите их всех! <span>Выкладывайте все, что накопилось в телефоне!</span></p>
 
     <picture class="upload__photo">
