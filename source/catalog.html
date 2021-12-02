@@ -50,57 +50,47 @@
 </header>
 
 <main class="page-main">
-  <h1 class="page-main__title">Фотографии пользователей</h1>
+  <div class="intro">
+    <h1 class="page-main__title">Фотографии пользователей</h1>
+  </div>
 
   <section class="gallery">
     <h2 class="visually-hidden">Галерея фотографий пользователей.</h2>
     <p class="gallery__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
-    <div class="gallery__select photo">
-      <div class="photo__small photo__small--selected">
-        <img src="img/catalog/photo-0-small.jpg"  width="320" height="137" alt="Фото Панорама (малый размер).">
-      </div>
-      <div class="photo__medium photo__small--selected">
-        <img src="img/catalog/photo-0-medium.jpg"  width="660" height="509" alt="Фото Панорама (средний размер).">
-      </div>
-      <div class="photo__big photo__small--selected">
-        <img src="img/catalog/photo-0-big.jpg"  width="1200" height="506" alt="Фото Панорама (большой размер).">
-      </div>
-      <div class="photo__details">
-        <p class="photo__author">Анна<span class="photo__timestamp">(5 минут назад)</span></p>
-        <p class="photo__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-      </div>
-      <div class="photo__like">
-        <p class="photo__count">Нравится: 215</p>
-        <a class="photo__link">
-          <img src="img/heart.svg"  width="13" height="12" alt="Лого сердечка.">
-        </a>
-      </div>
-    </div>
-
     <!-- удалить -->
     <style type="text/css">
-      .gallery__list {
-        display:grid;
-        grid-template-columns: 300px 300px 300px;
-        gap: 20px;
-      }
+      .gallery__list {display:grid;grid-template-columns: 300px 300px 300px;gap: 20px;}
+      .gallery__item--panorama {grid-column: 1 / 4;}
     </style>
-    <!--  -->
+    <!-- -->
 
     <ul class="gallery__list" >
+      <li class="gallery__item gallery__item--panorama">
+
+        <div class="gallery__photo photo">
+          <picture class="photo__image photo__image--selected">
+            <img src="img/catalog/photo-0.jpg"  width="1200" height="506" alt="Фото № 1.">
+          </picture>
+          <div class="photo__details">
+            <p class="photo__author">Анна<span class="photo__timestamp">(5 минут назад)</span></p>
+            <p class="photo__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          </div>
+          <div class="photo__like">
+            <p class="photo__count">Нравится: 215</p>
+            <a class="photo__link">
+              <img src="img/heart.svg"  width="13" height="12" alt="Лого сердечка.">
+            </a>
+          </div>
+        </div>
+
+      </li>
       <li class="gallery__item">
 
         <div class="gallery__photo photo">
-          <div class="photo__small">
-            <img src="img/catalog/photo-1-small.jpg"  width="280" height="180" alt="Фото №1 (малый размер).">
-          </div>
-          <div class="photo__medium">
-            <img src="img/catalog/photo-1-medium.jpg"  width="300" height="300" alt="Фото №1 (средний размер).">
-          </div>
-          <div class="photo__big">
-            <img src="img/catalog/photo-1-big.jpg"  width="300" height="400" alt="Фото №1 (большой размер).">
-          </div>
+          <picture class="photo__image">
+            <img src="img/catalog/photo-1.jpg"  width="300" height="400" alt="Фото №2.">
+          </picture>
           <div class="photo__details">
             <p class="photo__author">Левон<span class="photo__timestamp">(5 часов назад)</span></p>
             <p class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -117,15 +107,9 @@
       <li class="gallery__item">
 
         <div class="gallery__photo photo">
-          <div class="photo__small">
-            <img src="img/catalog/photo-2-small.jpg"  width="280" height="180" alt="Фото №2 (малый размер).">
-          </div>
-          <div class="photo__medium">
-            <img src="img/catalog/photo-2-medium.jpg"  width="300" height="300" alt="Фото №2 (средний размер).">
-          </div>
-          <div class="photo__big">
-            <img src="img/catalog/photo-2-big.jpg"  width="300" height="400" alt="Фото №2 (большой размер).">
-          </div>
+          <picture class="photo__image">
+            <img src="img/catalog/photo-2.jpg"  width="300" height="400" alt="Фото №3.">
+          </picture>
           <div class="photo__details">
             <p class="photo__author">Антон<span class="photo__timestamp">(12 часов назад)/span></p>
             <p class="photo__description">Соседи будут рады!</p>
@@ -142,15 +126,9 @@
       <li class="gallery__item">
 
         <div class="gallery__photo photo">
-          <div class="photo__small">
-            <img src="img/catalog/photo-3-small.jpg"  width="280" height="180" alt="Фото №3 (малый размер).">
-          </div>
-          <div class="photo__medium">
-            <img src="img/catalog/photo-3-medium.jpg"  width="300" height="300" alt="Фото №3 (средний размер).">
-          </div>
-          <div class="photo__big">
-            <img src="img/catalog/photo-3-big.jpg"  width="300" height="400" alt="Фото №3 (большой размер).">
-          </div>
+          <picture class="photo__image">
+            <img src="img/catalog/photo-3.jpg"  width="300" height="400" alt="Фото №4.">
+          </picture>
           <div class="photo__details">
             <p class="photo__author">Борис<span class="photo__timestamp">(20 часов назад)</span></p>
             <p class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -167,15 +145,9 @@
       <li class="gallery__item">
 
         <div class="gallery__photo photo">
-          <div class="photo__small">
-            <img src="img/catalog/photo-4-small.jpg"  width="280" height="180" alt="Фото №4 (малый размер).">
-          </div>
-          <div class="photo__medium">
-            <img src="img/catalog/photo-4-medium.jpg"  width="300" height="300" alt="Фото №4 (средний размер).">
-          </div>
-          <div class="photo__big">
-            <img src="img/catalog/photo-4-big.jpg"  width="300" height="400" alt="Фото №4 (большой размер).">
-          </div>
+          <picture class="photo__image">
+            <img src="img/catalog/photo-4.jpg"  width="300" height="400" alt="Фото №5.">
+          </picture>
           <div class="photo__details">
             <p class="photo__author">Сергей<span class="photo__timestamp">(25 часов назад)</span></p>
             <p class="photo__description">Самая кубанская в мире!</p>
@@ -192,15 +164,9 @@
       <li class="gallery__item">
 
         <div class="gallery__photo photo">
-          <div class="photo__small">
-            <img src="img/catalog/photo-5-small.jpg"  width="280" height="180" alt="Фото №5 (малый размер).">
-          </div>
-          <div class="photo__medium">
-            <img src="img/catalog/photo-5-medium.jpg"  width="300" height="300" alt="Фото №5 (средний размер).">
-          </div>
-          <div class="photo__big">
-            <img src="img/catalog/photo-5-big.jpg"  width="300" height="400" alt="Фото №5 (большой размер).">
-          </div>
+          <picture class="photo__image">
+            <img src="img/catalog/photo-5.jpg"  width="300" height="400" alt="Фото №6.">
+          </picture>
           <div class="photo__details">
             <p class="photo__author">Максим<span class="photo__timestamp">(40 часов назад)</span></p>
             <p class="photo__description">Где снег-то?</p>
@@ -217,15 +183,9 @@
       <li class="gallery__item">
 
         <div class="gallery__photo photo">
-          <div class="photo__small">
-            <img src="img/catalog/photo-6-small.jpg"  width="280" height="180" alt="Фото №6 (малый размер).">
-          </div>
-          <div class="photo__medium">
-            <img src="img/catalog/photo-6-medium.jpg"  width="300" height="300" alt="Фото №6 (средний размер).">
-          </div>
-          <div class="photo__big">
-            <img src="img/catalog/photo-6-big.jpg"  width="300" height="400" alt="Фото №6 (большой размер).">
-          </div>
+          <picture class="photo__image">
+            <img src="img/catalog/photo-6.jpg"  width="300" height="400" alt="Фото №7.">
+          </picture>
           <div class="photo__details">
             <p class="photo__author">Надежда<span class="photo__timestamp">(45 часов назад)</span></p>
             <p class="photo__description">Всем GM и взаимные лайки!</p>
@@ -245,59 +205,71 @@
   <section class="upload">
     <h2 class="visually-hidden">Загрузка фото.</h2>
     <p class="upload__description">Затмите их всех! <span>Выкладывайте все, что накопилось в телефоне!</span></p>
-    <div class="upload__photo">
+
+    <picture class="upload__photo">
       <img src="img/catalog/photo-upload.jpg"  width="300" height="400" alt="Фото для загрузки.">
-    </div>
+    </picture>
 
+    <div class="upload__editor">
 
-    <form class="upload__form" action="https://echo.htmlacademy.ru" method="post">
+      <ul class="upload__list">
+        <li class="upload__item">
 
-      <fieldset class="upload__fieldset fieldset-mobile">
-        <ul class="fieldset-mobile__list">
-          <li class="fieldset-mobile__item">
-            <input class="visually-hidden fieldset-mobile__input" id="input-crop" type="radio" name="upload-action" value="crop" checked>
-            <label class="visually-hidden fieldset-mobile__label" for="input-crop">Обрезка</label>
-          </li>
-          <li class="fieldset-mobile__item">
-            <input class="visually-hidden fieldset-mobile__input" id="input-saturation" type="radio" name="upload-action" value="saturation">
-            <label class="visually-hidden fieldset-mobile__label" for="input-saturation">Насыщенность</label>
-          </li>
-          <li class="fieldset-mobile__item">
-            <input class="visually-hidden fieldset-mobile__input" id="input-brightness" type="radio" name="upload-action" value="brightness">
-            <label class="visually-hidden fieldset-mobile__label" for="input-brightness">Яркость</label>
-          </li>
-        </ul>
-        <div class="fieldset-mobile__bar">
-          <button class="fieldset-mobile__toggle" type="button">
-            <span class="visually-hidden">Шкала изменений</span>
-          </button>
-        </div>
-      </fieldset>
+          <div class="upload__icon upload__icon--crop upload__icon--active">
+            <svg width="22" height="22" role="img" aria-label="Иконка Обрезки изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M16 14h2V6a2 2 0 0 0-2-2H8v2h8v8ZM6 16V0H4v4H0v2h4v10a2 2 0 0 0 2 2h10v4h2v-4h4v-2H6Z" fill="#D22856"/>
+            </svg>
+          </div>
+          <div class="upload__bar upload__bar--crop upload__bar--active">
+            <button class="upload__toggle upload__toggle--crop" type="button" name="toggle-crop">
+              <span class="visually-hidden">Шкала изменений обрезки</span>
+            </button>
+          </div>
 
-      <fieldset class="upload__fieldset fieldset-tablet">
-        <div class="fieldset-tablet__bar fieldset-tablet__bar--crop">
-          <button class="fieldset-tablet__toggle fieldset-tablet__toggle--crop" type="button" name="toggle-crop">
-            <span class="visually-hidden">Шкала изменений обрезки</span>
-          </button>
-        </div>
-        <div class="fieldset-tablet__bar fieldset-mobile__bar--saturation">
-          <button class="fieldset-tablet__toggle fieldset-tablet__toggle--saturation" type="button" name="toggle-saturation">
-            <span class="visually-hidden">Шкала изменений насыщенности</span>
-          </button>
-        </div>
-        <div class="fieldset-tablet__bar fieldset-mobile__bar--brightness">
-          <button class="fieldset-tablet__toggle fieldset-tablet__toggle--brightness" type="button" name="toggle-brightness">
-            <span class="visually-hidden">Шкала изменений яркости</span>
-          </button>
-        </div>
-      </fieldset>
+        </li>
+        <li class="upload__item">
+
+          <div class="upload__icon upload__icon--saturation">
+            <svg width="16" height="16" role="img" aria-label="Иконка Насыщенности изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2a6 6 0 1 1 0 12A6 6 0 0 1 8 2Zm0-2a8 8 0 1 0 0 16A8 8 0 0 0 8 0Z" fill="#D22856"/>
+              <path d="M8 12.14a4.26 4.26 0 0 0 0-8.5" fill="#D22856"/>
+            </svg>
+          </div>
+          <div class="upload__bar upload__bar--saturation">
+            <button class="upload__toggle upload__toggle--saturation" type="button" name="toggle-saturation">
+              <span class="visually-hidden">Шкала изменений насыщенности</span>
+            </button>
+          </div>
+
+        </li>
+        <li class="upload__item">
+
+          <div class="upload__icon upload__icon--brightness">
+            <svg width="24" height="22" role="img" aria-label="Иконка Яркости изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.56 9.15 7.62 0 6.2 1.45 8.6 3.88 3.44 9.15a1.55 1.55 0 0 0 0 2.17l5.5 5.63a1.48 1.48 0 0 0 2.12 0l5.5-5.63a1.55 1.55 0 0 0 0-2.17ZM5.21 10.23 10 5.33l4.8 4.9H5.2ZM19 11.77s-2 2.21-2 3.58c0 .54.21 1.06.59 1.45a1.98 1.98 0 0 0 2.82 0c.38-.39.59-.9.59-1.45 0-1.37-2-3.58-2-3.58ZM24 20.47H0V22h24v-1.53Z" fill="#D22856"/>
+            </svg>
+          </div>
+          <div class="upload__bar upload__bar--brightness">
+            <button class="upload__toggle upload__toggle--brightness" type="button" name="toggle-brightness">
+              <span class="visually-hidden">Шкала изменений яркости</span>
+            </button>
+          </div>
+
+        </li>
+      </ul>
+
+      <div class="upload__bar upload__bar--action">
+        <button class="upload__bar upload__bar--action" type="button" name="toggle-action">
+          <span class="visually-hidden">Шкала изменений</span>
+        </button>
+      </div>
 
       <div class="upload__buttons">
-        <button class="button upload__button" type="submit">Запостить</button>
-        <button class="button upload__button" type="reset">Отмена</button>
+        <button class="button upload__button" type="button">Запостить</button>
+        <button class="button upload__button" type="button">Отмена</button>
       </div>
-    </form>
 
+    </div>
   </section>
 
 </main>
