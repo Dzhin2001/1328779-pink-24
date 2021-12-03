@@ -59,6 +59,16 @@
     <h2 class="visually-hidden">Галерея фотографий пользователей.</h2>
     <p class="gallery__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
+    <style type="text/css">
+      .gallery__list {
+        display:grid;
+        grid-template-columns: 300px 300px 300px;
+        gap: 20px;
+      }
+      .gallery__item--panorama {
+        grid-column: 1 / 4;
+      }
+    </style>
 
     <ul class="gallery__list" >
       <li class="gallery__item gallery__item--panorama">
