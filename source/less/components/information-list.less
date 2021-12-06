@@ -1,0 +1,23 @@
+.information-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.information-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.information-list__title {
+  .mixin-set-family-font(18px, 24px, 700);
+  color: @h2-title-color;
+  margin: 0;
+}
+
+.information-list__description {
+  .mixin-set-family-font(14px, 24px, 400);
+  color: @h2-desc-color;
+  margin: 0;
+  text-align: center;
+}

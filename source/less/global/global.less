@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/opensans.woff2") format("woff2"),
+       url("../fonts/opensans.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+       url("../fonts/opensansbold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+       url("../fonts/opensanslight.woff") format("woff");
+  font-display: swap;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.mixin-set-family-font(
+    @font-size:   24px;
+    @line-hieght: 28px;
+    @font-weight: 300
+) {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: @font-size;
+  line-height: @line-hieght;
+  font-weight: @font-weight;
+}
