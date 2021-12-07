@@ -1,13 +1,19 @@
 .intro {
   display: flex;
   flex-direction: column;
-  background: @menu-bgcolor-base url("../img/intro.jpg") no-repeat  center/cover;
+  box-sizing: border-box;
+  background: @menu-bgcolor-base url("../img/intro.jpg") no-repeat  top/cover;
   padding: 92px 0 0 0;
+  min-height: 237px;
 }
 
 .intro__title {
   .mixin-set-family-font(24px, 28px, 300);
-  color: #ffffff;
+  color: @text-color-base;
   text-align: center;
   margin: 0;
+
+  & span {
+    display: block;
+  }
 }

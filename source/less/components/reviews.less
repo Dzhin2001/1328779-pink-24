@@ -1,6 +1,7 @@
 .reviews {
   position: relative;
   background-color: #ffffff;
+  padding: 40px 15px 0 15px;
 }
 
 .reviews__list {
@@ -19,8 +20,9 @@
 }
 
 .reviews__author-name {
-  .mixin-set-family-font(20px, 30px, 700);
+  .mixin-set-family-font(18px, 30px, 700);
   color: @h2-title-color;
+  font-style: normal;
   margin: 0;
 }
 
@@ -28,13 +30,19 @@
   .mixin-set-family-font(14px, 30px, 400);
   color: @h2-desc-color;
   margin: 0;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .reviews__text {
-  .mixin-set-family-font(18px, 30px, 400);
+  .mixin-set-family-font(14px, 30px, 400);
   color: @h2-desc-color;
   margin: 0;
+  padding-top: 15px;
   text-align: center;
+
 }
 
 .reviews__nav {
@@ -43,6 +51,10 @@
   left: 0;
   right: 0;
   bottom: 0;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .reviews__prev {
