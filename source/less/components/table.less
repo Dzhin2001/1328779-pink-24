@@ -1,0 +1,43 @@
+.table {
+  border-collapse: collapse;
+}
+
+.table__row {
+  //
+}
+
+.table__row--header {
+  //
+}
+
+.table__rate {
+  background: #283645;
+  color: @text-color-base;
+  border: 2px solid #283645;
+
+  & span {
+    display: block;
+  }
+}
+
+.table__tariff {
+  .mixin-set-family-font(16px, 30px, 700);
+}
+
+.table__price {
+  .mixin-set-family-font(18px, 30px, 300);
+}
+
+.table__product {
+  background: #ffffff;
+  .mixin-set-family-font(14px, 30px, 400);
+  color: @h2-desc-color;
+  border: 2px solid #e5e5e5;
+  text-transform: uppercase;
+}
+
+.table__item {
+  background: #ffffff;
+  border: 2px solid #e5e5e5;
+  text-align: center;
+}
