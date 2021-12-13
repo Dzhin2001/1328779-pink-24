@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 
 <body class="page__body">
@@ -24,7 +25,7 @@
       </svg>
     </button>
 
-    <ul class="main-nav__list">
+    <ul class="main-nav__list main-nav__list--hidden">
       <li class="main-nav__item">
         <a class="main-nav__link" href="index.html">
           Главная
@@ -53,7 +54,7 @@
 <main class="page-main">
   <div class="intro">
     <h1 class="visually-hidden">Форма для участия в конкурсе.</h1>
-    <p class="intro__title">Конкурс на самое <span>безбашенное</span> путешествие с Пинк</p>
+    <p class="intro__title">Конкурс на самое безбашенное<br> путешествие с Пинк</p>
   </div>
 
   <section class="form">
@@ -68,11 +69,11 @@
         <ul class="form__list">
           <li class="form__item form__item--full-name">
             <label class="form__label" for="input__surname">ФАМИЛИЯ:</label>
-            <input class="form__input" id="input__surname" type="text" name="surname" placeholder="Укажите фамилию *" required>
+            <input class="form__input" id="input__surname" type="text" name="surname" placeholder="Укажите фамилию *">
           </li>
           <li class="form__item form__item--full-name">
             <label class="form__label" for="input__first-name">ИМЯ:</label>
-            <input class="form__input" id="input__first-name" type="text" name="first-name" placeholder="Введите ваше имя *" required>
+            <input class="form__input" id="input__first-name" type="text" name="first-name" placeholder="Введите ваше имя *">
           </li>
           <li class="form__item form__item--full-name">
             <label class="form__label" for="input__patronymic">ОТЧЕСТВО:</label>
@@ -126,7 +127,7 @@
           </li>
           <li class="form__item form__item--contacts">
             <label class="form__label" for="input__email">АДРЕС ПОЧТЫ</label>
-            <input class="form__input" id="input__email" type="email" name="email" placeholder="Введите почту *" required>
+            <input class="form__input" id="input__email" type="email" name="email" placeholder="Введите почту *">
           </li>
         </ul>
       </fieldset>

@@ -6,9 +6,9 @@
 }
 
 .form__description {
-  background-color: #ffffff;
+  background-color: @white-color;
   .mixin-set-family-font(14px, 30px, 400);
-  color: @h2-desc-color;
+  color: @dark-blue-color;
   text-align: center;
   margin: 0;
   padding: 50px 20px;
@@ -20,33 +20,33 @@
 
 .form__fieldset { // LEGEND
   .mixin-reset-margin();
-  color: @h2-desc-color;
+  color: @dark-blue-color;
 
   &--full-name {
-    background-color: #ffffff;
-    border: 20px solid #ffffff;
+    background-color: @white-color;
+    border: 20px solid @white-color;
   }
 
   &--application {
-    background-color: #f2f2f2;
-    border: 20px solid #f2f2f2;
+    background-color: @grey-color;
+    border: 20px solid @grey-color;
     border-top-width: 100px;
   }
 
   &--contacts {
-    background-color: #ffffff;
-    border: 20px solid #ffffff;
+    background-color: @white-color;
+    border: 20px solid @white-color;
   }
 
   &--doings {
-    background-color: #f2f2f2;
-    border: 20px solid #f2f2f2;
+    background-color: @grey-color;
+    border: 20px solid @grey-color;
     border-top-width: 100px;
   }
 
   &--comment {
-    background-color: #ffffff;
-    border: 20px solid #ffffff;
+    background-color: @white-color;
+    border: 20px solid @white-color;
     border-top-width: 40px;
   }
 }
@@ -85,7 +85,7 @@
 
   &--checkbox,
   &--radio {
-    color: @h2-desc-color;
+    color: @dark-blue-color;
   }
 }
 
@@ -93,7 +93,7 @@
   box-sizing: border-box;
   .mixin-reset-margin();
   .mixin-set-family-font(18px, 30px, 400);
-  color: @h2-desc-color;
+  color: @dark-blue-color;
 
   &--comment {
     width: 100%;
@@ -104,7 +104,7 @@
 .form__buttons { // BUTTONS
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: @white-color;
   padding: 50px 20px 10px 20px;
 }
 
@@ -112,7 +112,7 @@
   background-color: @elf-color;
   .mixin-set-family-font(18px, 58px, 700);
   text-transform: uppercase;
-  color: @text-color-base;
+  color: @white-color;
 }
 
 .form__footnote {

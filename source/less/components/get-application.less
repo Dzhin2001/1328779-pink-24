@@ -1,4 +1,5 @@
 .get-application {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -11,17 +12,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #1d2631;
-  border: 1px solid #000000;
+  background: @grey-blue-color;
+  border: 1px solid @black-color;
   box-sizing: border-box;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
   min-height: 271px;
 }
 
 .get-application__link {
   text-decoration: none;
-  .mixin-set-family-font(18px, 18px, 700);
-  color: @text-color-base;
+  .mixin-set-family-font(18px, 48px, 700);
+  color: @white-color;
+  border: 3px solid @white-color;
+  box-sizing: border-box;
+  border-radius: 29px;
+  padding: 0 28px;
 }
 
 .get-application__list {
@@ -35,10 +40,28 @@
   flex-direction: row;
   align-items: center;
   .mixin-reset-margin();
+  padding: 16px;
 }
 
 .get-application__note {
   .mixin-set-family-font(14px, 24px, 300);
-  color: @text-color-base;
+  color: @white-color;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .get-application {
+    width: 50%;
+  }
+
+  .get-application__example {
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+  }
+
+  .get-application__load {
+    background: transparent;
+    border: none;
+  }
 }

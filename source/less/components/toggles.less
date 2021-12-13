@@ -7,11 +7,22 @@
   padding: 25px 0 40px 0;
 }
 
-
 .toggles__item {
-  .mixin-reset-margin();
+  position: relative;
+  padding: 13px;
 }
 
 .toggles__button {
-  //
+  position: absolute;
+  background-color: fade(@dark-blue-color, 30%);
+  padding: 3px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &--current {
+    background-color: @white-color;
+    outline: 3px solid @dark-blue-color;
+  }
 }

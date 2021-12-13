@@ -1,10 +1,12 @@
 .page-footer {
+  box-sizing: border-box;
   margin-top: auto;
   min-width: 100%;
-  background-color: #ffffff;
+  background-color: @white-color;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 .page-footer__logos {
@@ -26,6 +28,13 @@
 .page-footer__HTMLAcademy-link {
   text-decoration: none;
   .mixin-set-family-font(14px, 34px, 400);
-  color: @h2-desc-color;
+  color: @dark-blue-color;
   padding: 40px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

@@ -1,15 +1,15 @@
 .advantages {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
+  background-color: @grey-color;
   padding: 46px 0 0 0;
 }
 
 .advantages__description {
-  background-color: #ffffff;
+  background-color: @white-color;
   .mixin-set-family-font(24px, 28px, 300);
-  color: @h2-desc-color;
-  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%);
+  text-shadow: 0 4px 4px fade(@black-color, 25%);
+  color: @dark-blue-color;
   margin: 0;
   padding-bottom: 27px;
   text-align: center;
@@ -17,6 +17,32 @@
 
 .advantages__wraper {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__wraper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .advantages__description {
+    .mixin-set-family-font(40px, 55px, 300);
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .advantages__wraper {
+    display: block;
+  }
+
+  .advantages__example {
+    display: none;
+  }
+
+  .advantages__description {
+    .mixin-set-family-font(50px, 68px, 300);
+  }
 }
