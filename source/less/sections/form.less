@@ -139,8 +139,12 @@
   }
 
   .form__fieldset {
+    background-color: @white-color;
+    border: 1px solid @warm-white-color;
+
     &--full-name {
       grid-row: 1 / 2;
+      border: none;
     }
 
     &--application {
@@ -157,15 +161,6 @@
 
     &--comment {
       grid-row: 6 / 7;
-    }
-  }
-
-  .form__fieldset {
-    background-color: @white-color;
-    border: 1px solid @warm-white-color;
-
-    &--full-name {
-      border: none;
     }
   }
 
