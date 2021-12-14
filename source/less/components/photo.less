@@ -1,13 +1,13 @@
 .photo {
-  background-color: @grey-color;
+  //
 }
 
 .photo__image {
-  margin: 0;
-  padding: 0;
-
   &--selected {
-    //
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
   }
 }
 
@@ -18,19 +18,16 @@
 .photo__author {
   .mixin-set-family-font(14px, 24px, 700);
   color: @dark-blue-color;
-  margin: 0;
 }
 
 .photo__timestamp {
   .mixin-set-family-font(12px, 24px, 300);
   color: @dark-blue-color;
-  margin: 0;
 }
 
 .photo__description {
   .mixin-set-family-font(14px, 24px, 400);
   color: @dark-blue-color;
-  margin: 0;
 }
 
 .photo__like {

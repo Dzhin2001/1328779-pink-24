@@ -58,6 +58,10 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
+
+  &--contacts {
+    display: none;
+  }
 }
 
 .form__list { // LIST
@@ -113,6 +117,7 @@
   .mixin-set-family-font(18px, 58px, 700);
   text-transform: uppercase;
   color: @white-color;
+  max-width: 296px;
 }
 
 .form__footnote {
@@ -121,5 +126,122 @@
 
   & span {
     color: @pink-color;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    column-gap: 70px;
+    row-gap: 50px;
+  }
+
+  .form__fieldset {
+    &--full-name {
+      grid-row: 1 / 2;
+    }
+
+    &--application {
+      grid-row: 2 / 3;
+    }
+
+    &--contacts {
+      grid-row: 4 / 5;
+    }
+
+    &--doings {
+      grid-row: 5 / 6;
+    }
+
+    &--comment {
+      grid-row: 6 / 7;
+    }
+  }
+
+  .form__fieldset {
+    background-color: @white-color;
+    border: 1px solid @warm-white-color;
+
+    &--full-name {
+      border: none;
+    }
+  }
+
+  .form__legend { // LEGEND
+    &--contacts {
+      display: block;
+    }
+  }
+
+  .form__item {
+    &--full-name {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .form__buttons { // BUTTONS
+    grid-row: 7 / 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .form__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 70px;
+    row-gap: 50px;
+  }
+
+  .form__fieldset {
+    &--full-name {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--application {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &--contacts {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
+
+    &--doings {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+
+    &--comment {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+    }
+  }
+
+  .form__list {
+    &--contacts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 70px;
+    }
+  }
+
+  .form__buttons {
+    grid-column: 1 / 3;
+    grid-row: -1 / -2;
   }
 }
