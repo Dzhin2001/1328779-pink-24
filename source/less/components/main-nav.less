@@ -2,22 +2,35 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  padding: 20px;
+}
+
+.main-nav__logo {
+  z-index: 3;
+}
+
+.main-nav__toggle {
+  position: relative;
+  z-index: 3;
+}
+
+.main-nav__list:hover,
+.main-nav__toggle:hover + .main-nav__list {
+  display: flex;
 }
 
 .main-nav__list {
   position: absolute;
-  top: @menu-height + 1px;
+  top: 0;
   left: 0;
   right: 0;
   height: auto;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  background-color: @dark-blue-color;
+  .mixin-reset-list();
+  padding-top: @menu-height + 1px;
 
   &--hidden {
     display: none;
@@ -25,11 +38,68 @@
 }
 
 .main-nav__item {
-  //
+  box-sizing: border-box;
+  height: 63px;
+  background-color: @dark-blue-color;
+  box-shadow: 0 -1px 0 @black-color,
+    0 1px 0 @black-color,
+    0 1px 0 fade(@white-color, 15%) inset;
+  .mixin-reset-margin();
+  text-align: center;
 }
 
 .main-nav__link {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
-  .mixin-set-family-font(18px, 32px, 700);
-  color: @text-color-base;
+  text-transform: uppercase;
+  .mixin-set-family-font(18px, 60px, 700);
+  color: @white-color;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    padding-top: 30px;
+  }
+
+  .main-nav__list {
+    padding-top: @menu-height-tablet + 1px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    justify-content: normal;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    top: auto;
+    left: auto;
+    right: auto;
+    background-color: transparent;
+    padding-top: 0;
+    width: 100%;
+
+    &--hidden {
+      display: flex;
+    }
+  }
+
+  .main-nav__item {
+    background: transparent;
+    box-shadow: none;
+    height: auto;
+  }
+
+  .main-nav__link {
+    text-transform: none;
+    .mixin-set-family-font(18px, 24px, 400);
+  }
 }

@@ -1,0 +1,242 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  .mixin-set-family-font(14px, 18px, 400);
+  color: @pink-color;
+}
+
+.form__description {
+  background-color: @white-color;
+  .mixin-set-family-font(14px, 30px, 400);
+  color: @dark-blue-color;
+  text-align: center;
+  margin: 0;
+  padding: 50px 20px;
+
+  & span {
+    display: block;
+  }
+}
+
+.form__fieldset { // LEGEND
+  .mixin-reset-margin();
+  color: @dark-blue-color;
+
+  &--full-name {
+    background-color: @white-color;
+    border: 20px solid @white-color;
+  }
+
+  &--application {
+    background-color: @grey-color;
+    border: 20px solid @grey-color;
+    border-top-width: 100px;
+  }
+
+  &--contacts {
+    background-color: @white-color;
+    border: 20px solid @white-color;
+  }
+
+  &--doings {
+    background-color: @grey-color;
+    border: 20px solid @grey-color;
+    border-top-width: 100px;
+  }
+
+  &--comment {
+    background-color: @white-color;
+    border: 20px solid @white-color;
+    border-top-width: 40px;
+  }
+}
+
+.form__legend { // LEGEND
+  background-color: inherit;
+  .mixin-reset-margin();
+  color: @pink-color;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+
+  &--contacts {
+    display: none;
+  }
+}
+
+.form__list { // LIST
+  .mixin-reset-list();
+}
+
+.form__item { // ITEM
+  .mixin-reset-margin();
+
+  &--full-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form__label { // LABEL
+  .mixin-set-family-font(18px, 30px, 400);
+  color: @pink-color;
+  margin: 0;
+
+  &--checkbox,
+  &--radio {
+    color: @dark-blue-color;
+  }
+}
+
+.form__input { // INPUT
+  box-sizing: border-box;
+  .mixin-reset-margin();
+  .mixin-set-family-font(18px, 30px, 400);
+  color: @dark-blue-color;
+
+  &--comment {
+    width: 100%;
+    height: 197px;
+  }
+}
+
+.form__buttons { // BUTTONS
+  display: flex;
+  flex-direction: column;
+  background-color: @white-color;
+  padding: 50px 20px 10px 20px;
+}
+
+.form__button-submit {
+  background-color: @elf-color;
+  .mixin-set-family-font(18px, 58px, 700);
+  text-transform: uppercase;
+  color: @white-color;
+  max-width: 296px;
+}
+
+.form__footnote {
+  .mixin-set-family-font(14px, 30px, 400);
+  text-transform: uppercase;
+
+  & span {
+    color: @pink-color;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    column-gap: 70px;
+    row-gap: 50px;
+  }
+
+  .form__fieldset {
+    background-color: @white-color;
+    border: 1px solid @warm-white-color;
+
+    &--full-name {
+      grid-row: 1 / 2;
+      border: none;
+    }
+
+    &--application {
+      grid-row: 2 / 3;
+    }
+
+    &--contacts {
+      grid-row: 4 / 5;
+    }
+
+    &--doings {
+      grid-row: 5 / 6;
+    }
+
+    &--comment {
+      grid-row: 6 / 7;
+    }
+  }
+
+  .form__legend { // LEGEND
+    &--contacts {
+      display: block;
+    }
+  }
+
+  .form__item {
+    &--full-name {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .form__buttons { // BUTTONS
+    grid-row: 7 / 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .form__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 70px;
+    row-gap: 50px;
+  }
+
+  .form__fieldset {
+    &--full-name {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--application {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &--contacts {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
+
+    &--doings {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+
+    &--comment {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+    }
+  }
+
+  .form__list {
+    &--contacts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 70px;
+    }
+  }
+
+  .form__buttons {
+    grid-column: 1 / 3;
+    grid-row: -1 / -2;
+  }
+}

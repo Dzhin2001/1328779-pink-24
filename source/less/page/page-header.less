@@ -1,0 +1,14 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: @menu-height;
+  background-color: fade(@black-color, 30%);
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    min-height: @menu-height-tablet;
+  }
+}
