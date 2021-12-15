@@ -145,22 +145,27 @@
     &--full-name {
       grid-row: 1 / 2;
       border: none;
+      padding: 5px 0;
     }
 
     &--application {
       grid-row: 2 / 3;
+      padding: 40px 50px;
     }
 
     &--contacts {
       grid-row: 4 / 5;
+      padding: 50px 50px;
     }
 
     &--doings {
       grid-row: 5 / 6;
+      padding: 50px 50px;
     }
 
     &--comment {
       grid-row: 6 / 7;
+      padding: 40px 50px;
     }
   }
 
@@ -189,7 +194,6 @@
     justify-content: space-between;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .form__form {
@@ -228,10 +232,32 @@
   }
 
   .form__list {
+    &--full-name {
+      padding: 5px 0;
+    }
+
+    &--application {
+      padding: 40px 50px;
+    }
+
     &--contacts {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 70px;
+      padding: 20px 50px;
+    }
+
+    &--doings {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: min-content min-content;
+      column-gap: 50px;
+      row-gap: 40px;
+      padding: 50px 50px;
+    }
+
+    &--comment {
+      padding: 40px 50px;
     }
   }
 
