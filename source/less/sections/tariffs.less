@@ -1,10 +1,30 @@
 .tariffs {
-  display: flex;
-  flex-direction: column;
+  .mixin-flex-column();
   background-color: @grey-color;
   padding: 80px 0 0 0;
 }
 
+.tariffs__wrapper {
+  overflow-x: hidden;
+}
+
 .tariffs__table {
-  // table.less
+  position: relative;
+  transform: translateX(0); // +280px | 0 | -280px
+  .mixin-flex-column();
+}
+
+@media (min-width: @tablet-width) {
+  .tariffs__table {
+    position: static;
+    transform: translateX(0);
+  }
+
+  .tariffs {
+    padding-bottom: 70px;
+  }
+
+  .tariffs__dots {
+    display: none;
+  }
 }
