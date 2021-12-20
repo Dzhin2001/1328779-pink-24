@@ -1,28 +1,32 @@
 .advantages {
-  display: flex;
-  flex-direction: column;
-  background-color: @grey-color;
-  padding: 46px 0 0 0;
+  background: @white-color;
+  width: 100%;
+  //
 }
 
 .advantages__description {
-  background-color: @white-color;
+  background-color: transparent;
+  .mixin-flex-column(center);
   .mixin-set-family-font(24px, 28px, 300);
-  text-shadow: 0 4px 4px fade(@black-color, 25%);
   color: @dark-blue-color;
-  margin: 0;
+  padding-top: 46px;
   padding-bottom: 27px;
   text-align: center;
 }
 
-.advantages__wraper {
+.advantages__wrapper {
+  background: @grey-color;
+  width: 100%;
+}
+
+.advantages__wrapper-inner {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
 }
 
 @media (min-width: @tablet-width) {
-  .advantages__wraper {
+  .advantages__wrapper-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -34,7 +38,7 @@
 
 
 @media (min-width: @desktop-width) {
-  .advantages__wraper {
+  .advantages__wrapper-inner {
     display: block;
   }
 

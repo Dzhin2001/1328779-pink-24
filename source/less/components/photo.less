@@ -1,33 +1,28 @@
 .photo {
   //
+
+  &--panorama {
+    //
+  }
 }
 
 .photo__image {
-  &--selected {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 0;
+  .mixin-reset-margin();
+
+  &&--panorama {
+    position: relative;
+    width: 100vw;
+    //
   }
 }
 
 .photo__details {
-  //
-}
+  max-width: 280px;
 
-.photo__author {
-  .mixin-set-family-font(14px, 24px, 700);
-  color: @dark-blue-color;
-}
-
-.photo__timestamp {
-  .mixin-set-family-font(12px, 24px, 300);
-  color: @dark-blue-color;
-}
-
-.photo__description {
-  .mixin-set-family-font(14px, 24px, 400);
-  color: @dark-blue-color;
+  &--panorama {
+    background-color: @grey-color;
+    margin: 0 auto;
+  }
 }
 
 .photo__like {
@@ -35,7 +30,32 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   color: @pink-color;
+  max-width: 280px;
+
+  &--panorama {
+    background-color: @grey-color;
+    margin: 0 auto;
+  }
 }
+
+.photo__author {
+  .mixin-set-family-font(14px, 24px, 700);
+  .mixin-reset-margin();
+  color: @dark-blue-color;
+}
+
+.photo__timestamp {
+  .mixin-set-family-font(12px, 24px, 300);
+  .mixin-reset-margin();
+  color: @dark-blue-color;
+}
+
+.photo__description {
+  .mixin-set-family-font(14px, 24px, 400);
+  .mixin-reset-margin();
+  color: @dark-blue-color;
+}
+
 
 .photo__count {
   .mixin-set-family-font(12px, 24px, 400);
@@ -43,4 +63,24 @@
 
 .photo__button-like {
   //
+}
+
+@media (min-width: @tablet-width) {
+  .photo__details {
+    max-width: 620px;
+  }
+
+  .photo__like {
+    max-width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__details {
+    max-width: 940px;
+  }
+
+  .photo__like {
+    max-width: 940px;
+  }
 }

@@ -1,13 +1,19 @@
 .facts {
   display: none;
   background-color: @white-color;
-  min-height: 330px;
+  width: 100%;
 }
 
-.facts__wraper {
-  display: flex;
-  flex-direction: column;
+.facts__wrapper {
+  background: @white-color  url("../img/timer-small.png") no-repeat  left 10% center;
+  .mixin-flex-column(flex-end);
+}
+
+.facts__wrapper-inner {
+  .mixin-flex-column(flex-start);
   justify-content: center;
+  min-height: 330px;
+  width: 50%;
 }
 
 .facts__title {
@@ -29,21 +35,22 @@
 
 @media (min-width: @tablet-width) {
   .facts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: @white-color  url("../img/timer-small.png") no-repeat  left 10% center;
-  }
-
-  .facts__wraper {
-    grid-column: 2 / 3;
+    display: block;
   }
 }
 
 @media (min-width: @desktop-width) {
   .facts {
-    grid-template-columns: 1fr 2fr;
+    background-color: @grey-color;
+  }
+
+  .facts__wrapper {
     background: @grey-color  url("../img/timer-big.png") no-repeat  left 5% center;
+  }
+
+  .facts__wrapper-inner {
     min-height: 429px;
+    width: 60%;
   }
 
   .facts__description {

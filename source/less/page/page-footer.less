@@ -1,13 +1,11 @@
 .page-footer {
-  box-sizing: border-box;
+  width: 100%;
   margin-top: auto;
-  width: 100vw;
-  max-width: 1200px;
   background-color: @white-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+}
+
+.page-footer__wrapper {
+  .mixin-flex-column();
 }
 
 .page-footer__logos {
@@ -27,6 +25,7 @@
 }
 
 .page-footer__HTMLAcademy-link {
+  .mixin-flex-column();
   text-decoration: none;
   .mixin-set-family-font(14px, 34px, 400);
   color: @dark-blue-color;
@@ -34,7 +33,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
+  .page-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
   }

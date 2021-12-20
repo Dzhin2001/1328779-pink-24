@@ -9,6 +9,16 @@
   font-weight: @font-weight;
 }
 
+.mixin-flex-column(
+  @align: center;
+  @content: normal;
+) {
+  display: flex;
+  flex-direction: column;
+  align-items: @align;
+  justify-content: @content;
+}
+
 .mixin-reset-list() {
   list-style: none;
   margin: 0;
