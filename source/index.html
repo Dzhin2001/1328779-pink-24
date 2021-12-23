@@ -5,6 +5,9 @@
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c48b2710-db3a-4e6b-953c-138b7cf1c2f4" type="text/javascript"></script>
+    <script src="js/mapbasics.js" type="text/javascript"></script>
+    <script src="js/menu-nav.js" type="text/javascript"></script>
   </head>
 
   <body class="page__body">
@@ -267,10 +270,10 @@
         </div>
       </section>
 
-      <section class="contacts container">
+      <section class="contacts">
         <h2 class="visually-hidden">Наши контакты.</h2>
-        <p class="contacts__description">Остались вопросы? <br>Свяжитесь с нами!</p>
-        <ul class="contacts__list">
+        <p class="contacts__description container">Остались вопросы? <br>Свяжитесь с нами!</p>
+        <ul class="contacts__list container">
           <li class="contacts__item">
             <p class="contacts__name">Звоните:</p>
             <a class="contacts__link" href="tel:88125556666">
@@ -293,9 +296,9 @@
             </a>
           </li>
         </ul>
-        <div class="contacts__map">
-          <img src="img/map-small.jpg"  width="320" height="200" alt="Карта нашего офиса.">
-        </div>
+
+        <div class="contacts__map" id="map-contacts"></div>
+
       </section>
 
     </main>
@@ -351,5 +354,8 @@
 
       </div>
     </footer>
+
+
+
   </body>
 </html>

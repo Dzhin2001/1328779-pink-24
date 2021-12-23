@@ -29,3 +29,9 @@
   margin: 0;
   padding: 0;
 }
+
+.mixin-background-incline(@color, @deg:-4.7deg, @perc:83%) {
+  background:
+    linear-gradient(@deg, transparent @perc, @white-color @perc),
+    linear-gradient(to bottom, @color, @color);
+}
