@@ -10,26 +10,30 @@
 
 .page-footer__logos {
   padding: 40px 0;
-}
+  .mixin-svg-color(@dark-blue-color);
 
-.page-footer__glasses-link {
-  text-decoration: none;
-}
+  &:hover:not(&--active) {
+    .mixin-svg-color(@pink-color);
+  }
 
-.page-footer__logo {
-  text-decoration: none;
+  &:active:not(&--active) {
+    opacity: 30%;
+  }
 }
 
 .page-footer__social-list {
-  //
+  // social.less
 }
 
 .page-footer__HTMLAcademy-link {
-  .mixin-flex-column();
-  text-decoration: none;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 12px;
   .mixin-set-family-font(14px, 34px, 400);
+  .mixin-svg-color(@pink-color);
   color: @dark-blue-color;
   padding: 40px 0;
+  .mixin-behavior(@dark-blue-color);
 }
 
 @media (min-width: @tablet-width) {
