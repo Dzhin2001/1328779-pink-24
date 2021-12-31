@@ -1,16 +1,18 @@
 .get-application {
   position: relative;
+  z-index: 2;
   width: 100%;
-  .mixin-flex-column();
-
-  &--half-size {
-    align-items: flex-start;
-  }
 }
 
 .get-application__example {
+  background: url("../img/intro/example-small.png") no-repeat center;
   display: block;
-  padding: 0;
+  min-height: 286px;
+  width: 100%;
+}
+
+.get-application__wrapper {
+  .mixin-flex-column();
 }
 
 .get-application__load {
@@ -26,6 +28,19 @@
   border: 3px solid @white-color;
   border-radius: 29px;
   padding: 0 28px;
+
+  &:hover {
+    background-color: @white-color;
+    color: @pink-color;
+  }
+
+  &:focus {
+    //
+  }
+
+  &:active {
+    color: fade(@pink-color, 30%);
+  }
 }
 
 .get-application__list {
@@ -50,8 +65,10 @@
 
 @media (min-width: @tablet-width) {
   .get-application__example {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    display: none;
+  }
+
+  .get-application__wrapper {
+    align-items: flex-start;
   }
 }

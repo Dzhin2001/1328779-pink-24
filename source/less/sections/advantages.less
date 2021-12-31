@@ -1,7 +1,6 @@
 .advantages {
   background: @white-color;
   width: 100%;
-  //
 }
 
 .advantages__description {
@@ -26,6 +25,10 @@
   align-items: center;
 }
 
+.advantages__example {
+  margin-bottom: -43px;
+}
+
 @media (min-width: @tablet-width) {
   .advantages__wrapper-inner {
     display: grid;
@@ -34,6 +37,10 @@
 
   .advantages__description {
     .mixin-set-family-font(40px, 55px, 300);
+  }
+
+  .advantages__example {
+    margin-bottom: -65px;
   }
 }
 

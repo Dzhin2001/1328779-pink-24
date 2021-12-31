@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   let center = [59.938635, 30.323122];
+  let navMain = document.querySelector('.contacts__map');
+  navMain.classList.remove('contacts__map--no-js');
 
   function init() {
     let map = new ymaps.Map('map-contacts', {

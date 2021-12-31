@@ -78,3 +78,35 @@
     .mixin-border-color(fade(@bh-color, @perc));
   }
 }
+
+.mixin-behavior-toggle(@bh-color: @dark-blue-color) {
+  background-color: fade(@bh-color, 30%);
+
+  &:hover:not(&--active) {
+    background-color: fade(@bh-color, 60%);
+  }
+
+  &:focus:not(&--active) {
+    //
+  }
+
+  &:active:not(&--active) {
+    background-color: fade(@bh-color, 10%);
+  }
+}
+
+.mixin-behavior-arrow(@bh-color: @dark-blue-color) {
+  border-color: fade(@bh-color, 30%);
+
+  &:hover:not(&--active) {
+    border-color: fade(@bh-color, 60%);
+  }
+
+  &:focus:not(&--active) {
+    //
+  }
+
+  &:active:not(&--active) {
+    border-color: fade(@bh-color, 10%);
+  }
+}

@@ -55,31 +55,33 @@
     </header>
 
     <main class="page-main">
-      <div class="intro">
+      <div class="intro intro--with-example">
         <h1 class="visually-hidden">Сайт хорошего настроения PINK.</h1>
         <div class="intro__wrapper intro__wrapper--half-size container">
           <p class="intro__title intro__title--half-size">Взгляните на жизнь иначе!</p>
         </div>
 
-        <section class="get-application get-application--half-size container">
+        <section class="get-application get-application">
           <h2 class="visually-hidden">Загрузите приложение PINK.</h2>
           <div class="get-application__example">
-            <img src="img/app_example.png"  width="320" height="286" alt="Пример экрана приложения.">
+            <span class="visually-hidden">Пример экрана приложения.</span>
           </div>
-          <div class="get-application__load">
-            <a class="get-application__link" href="#">Скачать приложение</a>
-            <ul class="get-application__list">
-              <li class="get-application__item">
-                <img src="img/apple-logo.svg"  width="47" height="56" alt="Лого apple.">
-              </li>
-              <li class="get-application__item">
-                <img src="img/android-logo.svg"  width="43" height="47" alt="Лого Andriod.">
-              </li>
-              <li class="get-application__item">
-                <img src="img/microsoft-logo.svg"  width="44" height="41" alt="Лого microsoft.">
-              </li>
-            </ul>
-            <p class="get-application__note">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
+          <div class="get-application__wrapper get-application__wrapper--half-size container">
+            <div class="get-application__load">
+              <a class="get-application__link" href="index.html">Скачать приложение</a>
+              <ul class="get-application__list">
+                <li class="get-application__item">
+                  <img src="img/apple-logo.svg"  width="47" height="56" alt="Лого apple.">
+                </li>
+                <li class="get-application__item">
+                  <img src="img/android-logo.svg"  width="43" height="47" alt="Лого Andriod.">
+                </li>
+                <li class="get-application__item">
+                  <img src="img/microsoft-logo.svg"  width="44" height="41" alt="Лого microsoft.">
+                </li>
+              </ul>
+              <p class="get-application__note">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
+            </div>
           </div>
         </section>
 
@@ -93,28 +95,29 @@
         <div class="advantages__wrapper">
           <div class="advantages__wrapper-inner container">
 
-          <div class="advantages__example">
-            <img src="img/screen.png"  width="268" height="547" alt="Пример экрана приложения.">
-          </div>
+          <picture class="advantages__example">
+            <source media="(min-width: 660px)" srcset="img/advantage/screen-3-big.png">
+            <img src="img/advantage/screen-3-small.png" width="157" height="320" alt="Пример экрана приложения.">
+          </picture>
 
           <ul class="advantages__list information-list">
             <li class="information-list__item">
               <div class="information-list__example">
-                <img src="img/screen-1.png"  width="186" height="382" alt="Пример экрана приложения №1.">
+                <img src="img/advantage/screen-1.png" width="186" height="382" alt="Пример экрана приложения №1.">
               </div>
               <h3 class="information-list__title">Поднимает настроение</h3>
               <p class="information-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="information-list__item">
               <div class="information-list__example">
-                <img src="img/screen-2.png"  width="186" height="382" alt="Пример экрана приложения №2.">
+                <img src="img/advantage/screen-2.png" width="186" height="382" alt="Пример экрана приложения №2.">
               </div>
               <h3 class="information-list__title">Меняет мир вокруг</h3>
               <p class="information-list__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
             <li class="information-list__item">
               <div class="information-list__example">
-                <img src="img/screen-3.png"  width="186" height="382" alt="Пример экрана приложения №3.">
+                <img src="img/advantage/screen-3.png" width="186" height="382" alt="Пример экрана приложения №3.">
               </div>
               <h3 class="information-list__title">Заводит новых друзей</h3>
               <p class="information-list__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
@@ -157,7 +160,7 @@
         </div>
         <ol class="reviews__dots toggles">
           <li class="toggles__item">
-            <button class="toggles__button toggles__button--current" type="button">
+            <button class="toggles__button toggles__button--active" type="button">
               <span class="visually-hidden">1</span>
             </button>
           </li>
@@ -256,7 +259,7 @@
               </button>
             </li>
             <li class="toggles__item">
-              <button class="toggles__button toggles__button--current" type="button">
+              <button class="toggles__button toggles__button--active" type="button">
                 <span class="visually-hidden">2</span>
               </button>
             </li>
@@ -297,7 +300,7 @@
           </li>
         </ul>
 
-        <div class="contacts__map" id="map-contacts"></div>
+        <div class="contacts__map contacts__map--no-js" id="map-contacts"></div>
 
       </section>
 
