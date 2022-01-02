@@ -68,15 +68,21 @@
       <picture class="photo__image photo__image--panorama">
         <img src="img/catalog/photo-0.jpg"  width="1200" height="506" alt="Фото № 1.">
       </picture>
-      <div class="photo__details photo__details--panorama">
-        <p class="photo__author">Анна<span class="photo__timestamp">(5 минут назад)</span></p>
-        <p class="photo__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+      <div class="photo__wrapper container">
+        <div class="photo__details photo__details--panorama">
+          <p class="photo__author photo__author--panorama">Анна<span class="photo__timestamp">(5 минут назад)</span></p>
+          <p class="photo__description photo__description--panorama">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <div class="photo__like photo__like--panorama">
+            <p class="photo__count photo__count--panorama">Нравится: 215</p>
+            <button class="photo__button-like button" type="button">
+              <span class="visually-hidden">Поставить LIKE!</span>
+              <svg width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.47 12a.78.78 0 0 1-.58-.25C1.96 7.42 1.04 6.44.86 6.17A3.77 3.77 0 0 1 0 3.8c0-.73.22-1.44.63-2.05.4-.6.99-1.1 1.67-1.4A4.09 4.09 0 0 1 6.51.9a4.08 4.08 0 0 1 5.34.22A3.73 3.73 0 0 1 13 3.8a3.4 3.4 0 0 1-.92 2.38l-5.04 5.56a.76.76 0 0 1-.57.25V12Zm-4.4-6.72c.22.26 2.56 2.84 4.4 4.86l4.48-4.94c.36-.38.55-.88.54-1.4 0-.62-.26-1.21-.71-1.65a2.46 2.46 0 0 0-2.8-.43c-.35.16-.65.4-.88.69a.82.82 0 0 1-.61.28.76.76 0 0 1-.6-.3 2.43 2.43 0 0 0-1.95-.92c-.45 0-.9.13-1.28.37s-.69.57-.88.97a2.27 2.27 0 0 0 .3 2.46v.01Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="photo__like photo__like--panorama">
-        <p class="photo__count">Нравится: 215</p>
-        <button class="photo__button-like" type="button">
-          <span class="visually-hidden">Поставить LIKE!</span>
-        </button>
       </div>
     </div>
 
@@ -87,15 +93,20 @@
           <picture class="photo__image">
             <img src="img/catalog/photo-1.jpg"  width="300" height="400" alt="Фото №2.">
           </picture>
-          <div class="photo__details">
-            <p class="photo__author">Левон<span class="photo__timestamp">(5 часов назад)</span></p>
-            <p class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-          </div>
-          <div class="photo__like">
-            <p class="photo__count">Нравится: 356</p>
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Поставить LIKE!</span>
-            </button>
+          <div class="photo__wrapper">
+            <div class="photo__details">
+              <p class="photo__author">Левон<span class="photo__timestamp">(5 часов назад)</span></p>
+              <p class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="photo__like">
+                <p class="photo__count">Нравится: 356</p>
+                <button class="photo__button-like button" type="button">
+                  <span class="visually-hidden">Поставить LIKE!</span>
+                  <svg width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.47 12a.78.78 0 0 1-.58-.25C1.96 7.42 1.04 6.44.86 6.17A3.77 3.77 0 0 1 0 3.8c0-.73.22-1.44.63-2.05.4-.6.99-1.1 1.67-1.4A4.09 4.09 0 0 1 6.51.9a4.08 4.08 0 0 1 5.34.22A3.73 3.73 0 0 1 13 3.8a3.4 3.4 0 0 1-.92 2.38l-5.04 5.56a.76.76 0 0 1-.57.25V12Zm-4.4-6.72c.22.26 2.56 2.84 4.4 4.86l4.48-4.94c.36-.38.55-.88.54-1.4 0-.62-.26-1.21-.71-1.65a2.46 2.46 0 0 0-2.8-.43c-.35.16-.65.4-.88.69a.82.82 0 0 1-.61.28.76.76 0 0 1-.6-.3 2.43 2.43 0 0 0-1.95-.92c-.45 0-.9.13-1.28.37s-.69.57-.88.97a2.27 2.27 0 0 0 .3 2.46v.01Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </li>
@@ -105,15 +116,20 @@
           <picture class="photo__image">
             <img src="img/catalog/photo-2.jpg"  width="300" height="400" alt="Фото №3.">
           </picture>
-          <div class="photo__details">
-            <p class="photo__author">Антон<span class="photo__timestamp">(12 часов назад)</span></p>
-            <p class="photo__description">Соседи будут рады!</p>
-          </div>
-          <div class="photo__like">
-            <p class="photo__count">Нравится: 666</p>
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Поставить LIKE!</span>
-            </button>
+          <div class="photo__wrapper">
+            <div class="photo__details">
+              <p class="photo__author">Антон<span class="photo__timestamp">(12 часов назад)</span></p>
+              <p class="photo__description">Соседи будут рады!</p>
+              <div class="photo__like">
+                <p class="photo__count">Нравится: 666</p>
+                <button class="photo__button-like button" type="button">
+                  <span class="visually-hidden">Поставить LIKE!</span>
+                  <svg width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.47 12a.78.78 0 0 1-.58-.25C1.96 7.42 1.04 6.44.86 6.17A3.77 3.77 0 0 1 0 3.8c0-.73.22-1.44.63-2.05.4-.6.99-1.1 1.67-1.4A4.09 4.09 0 0 1 6.51.9a4.08 4.08 0 0 1 5.34.22A3.73 3.73 0 0 1 13 3.8a3.4 3.4 0 0 1-.92 2.38l-5.04 5.56a.76.76 0 0 1-.57.25V12Zm-4.4-6.72c.22.26 2.56 2.84 4.4 4.86l4.48-4.94c.36-.38.55-.88.54-1.4 0-.62-.26-1.21-.71-1.65a2.46 2.46 0 0 0-2.8-.43c-.35.16-.65.4-.88.69a.82.82 0 0 1-.61.28.76.76 0 0 1-.6-.3 2.43 2.43 0 0 0-1.95-.92c-.45 0-.9.13-1.28.37s-.69.57-.88.97a2.27 2.27 0 0 0 .3 2.46v.01Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </li>
@@ -123,15 +139,20 @@
           <picture class="photo__image">
             <img src="img/catalog/photo-3.jpg"  width="300" height="400" alt="Фото №4.">
           </picture>
-          <div class="photo__details">
-            <p class="photo__author">Борис<span class="photo__timestamp">(20 часов назад)</span></p>
-            <p class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-          </div>
-          <div class="photo__like">
-            <p class="photo__count">Нравится: 215</p>
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Поставить LIKE!</span>
-            </button>
+          <div class="photo__wrapper">
+            <div class="photo__details">
+              <p class="photo__author">Борис<span class="photo__timestamp">(20 часов назад)</span></p>
+              <p class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="photo__like">
+                <p class="photo__count">Нравится: 215</p>
+                <button class="photo__button-like button" type="button">
+                  <span class="visually-hidden">Поставить LIKE!</span>
+                  <svg width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.47 12a.78.78 0 0 1-.58-.25C1.96 7.42 1.04 6.44.86 6.17A3.77 3.77 0 0 1 0 3.8c0-.73.22-1.44.63-2.05.4-.6.99-1.1 1.67-1.4A4.09 4.09 0 0 1 6.51.9a4.08 4.08 0 0 1 5.34.22A3.73 3.73 0 0 1 13 3.8a3.4 3.4 0 0 1-.92 2.38l-5.04 5.56a.76.76 0 0 1-.57.25V12Zm-4.4-6.72c.22.26 2.56 2.84 4.4 4.86l4.48-4.94c.36-.38.55-.88.54-1.4 0-.62-.26-1.21-.71-1.65a2.46 2.46 0 0 0-2.8-.43c-.35.16-.65.4-.88.69a.82.82 0 0 1-.61.28.76.76 0 0 1-.6-.3 2.43 2.43 0 0 0-1.95-.92c-.45 0-.9.13-1.28.37s-.69.57-.88.97a2.27 2.27 0 0 0 .3 2.46v.01Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </li>
@@ -141,15 +162,20 @@
           <picture class="photo__image">
             <img src="img/catalog/photo-4.jpg"  width="300" height="400" alt="Фото №5.">
           </picture>
-          <div class="photo__details">
-            <p class="photo__author">Сергей<span class="photo__timestamp">(25 часов назад)</span></p>
-            <p class="photo__description">Самая кубанская в мире!</p>
-          </div>
-          <div class="photo__like">
-            <p class="photo__count">Нравится: 4</p>
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Поставить LIKE!</span>
-            </button>
+          <div class="photo__wrapper">
+            <div class="photo__details">
+              <p class="photo__author">Сергей<span class="photo__timestamp">(25 часов назад)</span></p>
+              <p class="photo__description">Самая кубанская в мире!</p>
+              <div class="photo__like">
+                <p class="photo__count">Нравится: 4</p>
+                <button class="photo__button-like button" type="button">
+                  <span class="visually-hidden">Поставить LIKE!</span>
+                  <svg width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.47 12a.78.78 0 0 1-.58-.25C1.96 7.42 1.04 6.44.86 6.17A3.77 3.77 0 0 1 0 3.8c0-.73.22-1.44.63-2.05.4-.6.99-1.1 1.67-1.4A4.09 4.09 0 0 1 6.51.9a4.08 4.08 0 0 1 5.34.22A3.73 3.73 0 0 1 13 3.8a3.4 3.4 0 0 1-.92 2.38l-5.04 5.56a.76.76 0 0 1-.57.25V12Zm-4.4-6.72c.22.26 2.56 2.84 4.4 4.86l4.48-4.94c.36-.38.55-.88.54-1.4 0-.62-.26-1.21-.71-1.65a2.46 2.46 0 0 0-2.8-.43c-.35.16-.65.4-.88.69a.82.82 0 0 1-.61.28.76.76 0 0 1-.6-.3 2.43 2.43 0 0 0-1.95-.92c-.45 0-.9.13-1.28.37s-.69.57-.88.97a2.27 2.27 0 0 0 .3 2.46v.01Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </li>
@@ -159,15 +185,20 @@
           <picture class="photo__image">
             <img src="img/catalog/photo-5.jpg"  width="300" height="400" alt="Фото №6.">
           </picture>
-          <div class="photo__details">
-            <p class="photo__author">Максим<span class="photo__timestamp">(40 часов назад)</span></p>
-            <p class="photo__description">Где снег-то?</p>
-          </div>
-          <div class="photo__like">
-            <p class="photo__count">Нравится: 150</p>
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Поставить LIKE!</span>
-            </button>
+          <div class="photo__wrapper">
+            <div class="photo__details">
+              <p class="photo__author">Максим<span class="photo__timestamp">(40 часов назад)</span></p>
+              <p class="photo__description">Где снег-то?</p>
+              <div class="photo__like">
+                <p class="photo__count">Нравится: 150</p>
+                <button class="photo__button-like button" type="button">
+                  <span class="visually-hidden">Поставить LIKE!</span>
+                  <svg width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.47 12a.78.78 0 0 1-.58-.25C1.96 7.42 1.04 6.44.86 6.17A3.77 3.77 0 0 1 0 3.8c0-.73.22-1.44.63-2.05.4-.6.99-1.1 1.67-1.4A4.09 4.09 0 0 1 6.51.9a4.08 4.08 0 0 1 5.34.22A3.73 3.73 0 0 1 13 3.8a3.4 3.4 0 0 1-.92 2.38l-5.04 5.56a.76.76 0 0 1-.57.25V12Zm-4.4-6.72c.22.26 2.56 2.84 4.4 4.86l4.48-4.94c.36-.38.55-.88.54-1.4 0-.62-.26-1.21-.71-1.65a2.46 2.46 0 0 0-2.8-.43c-.35.16-.65.4-.88.69a.82.82 0 0 1-.61.28.76.76 0 0 1-.6-.3 2.43 2.43 0 0 0-1.95-.92c-.45 0-.9.13-1.28.37s-.69.57-.88.97a2.27 2.27 0 0 0 .3 2.46v.01Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </li>
@@ -177,15 +208,20 @@
           <picture class="photo__image">
             <img src="img/catalog/photo-6.jpg"  width="300" height="400" alt="Фото №7.">
           </picture>
-          <div class="photo__details">
-            <p class="photo__author">Надежда<span class="photo__timestamp">(45 часов назад)</span></p>
-            <p class="photo__description">Всем GM и взаимные лайки!</p>
-          </div>
-          <div class="photo__like">
-            <p class="photo__count">Нравится: 2560</p>
-            <button class="photo__button-like" type="button">
-              <span class="visually-hidden">Поставить LIKE!</span>
-            </button>
+          <div class="photo__wrapper">
+            <div class="photo__details">
+              <p class="photo__author">Надежда<span class="photo__timestamp">(45 часов назад)</span></p>
+              <p class="photo__description">Всем GM и взаимные лайки!</p>
+              <div class="photo__like">
+                <p class="photo__count">Нравится: 2560</p>
+                <button class="photo__button-like button" type="button">
+                  <span class="visually-hidden">Поставить LIKE!</span>
+                  <svg width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.47 12a.78.78 0 0 1-.58-.25C1.96 7.42 1.04 6.44.86 6.17A3.77 3.77 0 0 1 0 3.8c0-.73.22-1.44.63-2.05.4-.6.99-1.1 1.67-1.4A4.09 4.09 0 0 1 6.51.9a4.08 4.08 0 0 1 5.34.22A3.73 3.73 0 0 1 13 3.8a3.4 3.4 0 0 1-.92 2.38l-5.04 5.56a.76.76 0 0 1-.57.25V12Zm-4.4-6.72c.22.26 2.56 2.84 4.4 4.86l4.48-4.94c.36-.38.55-.88.54-1.4 0-.62-.26-1.21-.71-1.65a2.46 2.46 0 0 0-2.8-.43c-.35.16-.65.4-.88.69a.82.82 0 0 1-.61.28.76.76 0 0 1-.6-.3 2.43 2.43 0 0 0-1.95-.92c-.45 0-.9.13-1.28.37s-.69.57-.88.97a2.27 2.27 0 0 0 .3 2.46v.01Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </li>
