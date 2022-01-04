@@ -69,6 +69,7 @@
 }
 
 .form__item { // ITEM
+  position: relative;
   .mixin-reset-margin();
 
   &--full-name {
@@ -83,14 +84,24 @@
 }
 
 .form__label { // LABEL
-  .mixin-set-family-font(18px, 30px, 400);
+  .mixin-set-family-font(14px, 30px, 400);
   color: @pink-color;
   margin: 0;
 
   &--checkbox,
   &--radio {
+    .mixin-set-family-font(18px, 30px, 400);
     color: @dark-blue-color;
+    padding-left: 57px;
+    line-height: 41px;
   }
+}
+
+.form__mark {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  pointer-events: none;
 }
 
 .form__input { // INPUT
@@ -102,6 +113,60 @@
     width: 100%;
     min-height: 197px;
     resize: none;
+  }
+
+  &--radio + .form__mark {
+    width: 37px;
+    height: 37px;
+    border: 11px solid @grey-color;
+    outline: 2px solid @warm-white-color;
+    border-radius: 50%;
+  }
+
+  &--radio:checked + .form__mark {
+    background-color: @pink-color;
+  }
+
+  &--radio:hover + .form__mark {
+    outline-color: @dark-blue-color;
+  }
+
+  &--radio:focus + .form__mark {
+    outline-color: @pink-color;
+  }
+
+  &--radio:active + .form__mark {
+    outline-color: @pink-color;
+  }
+
+  &--radio:disabled {
+    pointer-events: none;
+  }
+
+  &--checkbox + .form__mark {
+    width: 35px;
+    height: 35px;
+    outline: 2px solid @warm-white-color;
+  }
+
+  &--checkbox:checked + .form__mark {
+    background: url("../img/tick.svg") no-repeat center;
+  }
+
+  &--checkbox:hover + .form__mark {
+    outline-color: @dark-blue-color;
+  }
+
+  &--checkbox:focus + .form__mark {
+    outline-color: @pink-color;
+  }
+
+  &--checkbox:active + .form__mark {
+    outline-color: @pink-color;
+  }
+
+  &--checkbox:disabled {
+    pointer-events: none;
   }
 }
 
@@ -160,7 +225,7 @@
 
     &--doings {
       grid-row: 5 / 6;
-      padding: 50px 50px;
+      padding: 50px 30px;
     }
 
     &--comment {
@@ -218,6 +283,22 @@
     }
   }
 
+  .form__input {
+    &--logo-tel {
+      background: url("../img/phone.svg") no-repeat center right;
+      padding-right: 60px;
+    }
+
+    &--logo-mail {
+      background: url("../img/mail.svg") no-repeat center right;
+      padding-right: 60px;
+    }
+
+    &--radio + .form__mark {
+      border: 11px solid @white-color;
+    }
+  }
+
   .form__buttons { // BUTTONS
     grid-row: 7 / 8;
     display: flex;
@@ -271,7 +352,7 @@
     }
 
     &--application {
-      padding: 40px 50px;
+      padding: 0;
     }
 
     &--contacts {
@@ -283,11 +364,11 @@
 
     &--doings {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: min-content min-content;
+      grid-template-columns: 1fr 1fr 1fr;
       column-gap: 50px;
       row-gap: 40px;
-      padding: 50px 50px;
+      padding: 0;
     }
 
     &--comment {

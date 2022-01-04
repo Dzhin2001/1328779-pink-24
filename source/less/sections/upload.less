@@ -74,6 +74,15 @@
   width: 22px;
   height: 22px;
   .mixin-flex-column();
+  .mixin-svg-color(fade(@dark-blue-color, 30%));
+
+  &--active {
+    .mixin-svg-color(@pink-color);
+  }
+
+  &:hover:not(&--active) {
+    .mixin-svg-color(fade(@dark-blue-color, 50%));
+  }
 }
 
 .upload__buttons {
@@ -157,12 +166,38 @@
     border-bottom: 2px solid fade(@dark-blue-color, 10%);
   }
 
+  .upload__icon {
+    .mixin-svg-color(@pink-color);
+
+    &--active {
+      //
+    }
+
+    &:hover:not(&--active) {
+      //
+    }
+  }
+
   .upload__bar {
     display: block;
     min-width: 202px;
 
     &--action {
       display: none;
+    }
+  }
+
+  .upload__toggle {
+    &--crop {
+      left: 160px;
+    }
+
+    &--saturation {
+      left: 25px;
+    }
+
+    &--brightness {
+      left: 96px;
     }
   }
 }
@@ -184,5 +219,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 44px;
+  }
+
+  .upload__toggle {
+    &--crop {
+      left: 234px;
+    }
+
+    &--saturation {
+      left: 36px;
+    }
+
+    &--brightness {
+      left: 137px;
+    }
   }
 }
