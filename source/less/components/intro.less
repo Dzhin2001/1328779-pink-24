@@ -1,7 +1,29 @@
 .intro {
-  background: @grey-blue-color url("../img/intro/intro-default.jpg") no-repeat top center;
+  position: relative;
   width: 100%;
-  padding: @menu-height+26px 0 0 0;
+  padding: @menu-height+24px 0 0 0;
+
+  &::before {
+    z-index: -2;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: @grey-blue-color url("../img/intro/intro-small.jpg") no-repeat top center;
+  }
+
+  &--with-example::after {
+    content: "";
+    position: relative;
+    right: 0;
+    bottom: 0;
+    background: url("../img/intro/example-medium.png") no-repeat right bottom;
+    min-height: 462px;
+    width: 100%;
+  }
 }
 
 .intro__wrapper {
@@ -14,23 +36,45 @@
 
 .intro__title {
   .mixin-set-family-font(24px, 28px, 300);
+  .mixin-reset-margin();
   color: @white-color;
   text-align: center;
-  padding-top: 0;
-  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 70px;
 
   &--half-size {
     max-width: 280px;
+    padding-top: 0;
+    padding-bottom: 30px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .intro {
-    background: @grey-blue-color url("../img/intro/intro-medium.jpg") no-repeat top/cover;
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: @grey-blue-color url("../img/intro/intro-medium.jpg") no-repeat center/cover;
+    }
+
+    &--with-example::after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: url("../img/intro/example-medium.png") no-repeat right bottom;
+      min-height: 545px;
+      width: 100%;
+    }
   }
 
   .intro__title {
     .mixin-set-family-font(50px, 68px, 300);
+    padding-top: 122px;
+    padding-bottom: 70px;
 
     &--half-size {
       .mixin-set-family-font(40px, 48px, 300);
@@ -41,10 +85,19 @@
 
 @media (min-width: @desktop-width) {
   .intro {
-    background: @grey-blue-color url("../img/intro/intro-big.jpg") no-repeat top/cover;
+    &::before {
+      background: @grey-blue-color url("../img/intro/intro-big.jpg") no-repeat center/cover;
+    }
+
+    &--with-example::after {
+      background: url("../img/intro/example-big.png") no-repeat right bottom;
+      min-height: 645px;
+    }
   }
 
   .intro__title {
     .mixin-set-family-font(50px, 68px, 300);
+    padding-top: 134px;
+    padding-bottom: 70px;
   }
 }

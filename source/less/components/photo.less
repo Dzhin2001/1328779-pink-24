@@ -2,40 +2,26 @@
   //
 
   &--panorama {
+    .mixin-flex-column();
     //
   }
 }
 
 .photo__image {
+  display: block;
   .mixin-reset-margin();
+}
 
-  &&--panorama {
-    position: relative;
-    width: 100vw;
-    //
-  }
+.photo__wrapper {
+  overflow-x: hidden;
+  //
 }
 
 .photo__details {
-  max-width: 280px;
-
-  &--panorama {
-    background-color: @grey-color;
-    margin: 0 auto;
-  }
-}
-
-.photo__like {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  color: @pink-color;
-  max-width: 280px;
-
-  &--panorama {
-    background-color: @grey-color;
-    margin: 0 auto;
-  }
+  display: grid;
+  grid-template-rows: minmax(26px, max-content) minmax(54px, max-content) minmax(27px, max-content);
+  background-color: @grey-color;
+  padding: 17px;
 }
 
 .photo__author {
@@ -56,31 +42,71 @@
   color: @dark-blue-color;
 }
 
+.photo__like {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  background-color: @grey-color;
+  color: @pink-color;
+  margin: 0;
+}
 
 .photo__count {
+  .mixin-reset-margin();
   .mixin-set-family-font(12px, 24px, 400);
+  padding-left: 17px;
 }
 
 .photo__button-like {
-  //
+  .mixin-reset-margin();
+  .mixin-svg-color(@pink-color);
+  .mixin-behavior(@pink-color);
 }
 
 @media (min-width: @tablet-width) {
   .photo__details {
-    max-width: 620px;
+    &--panorama {
+      display: grid;
+      grid-template-rows: minmax(26px, max-content) min-content;
+      grid-template-columns: 50% 50%;
+    }
+  }
+
+  .photo__author {
+    &--panorama {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
   }
 
   .photo__like {
-    max-width: 620px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &--panorama {
+      justify-content: flex-end;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  }
+
+  .photo__description {
+    &--panorama {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+
+  .photo__count {
+    padding-left: 0;
+
+    &--panorama {
+      padding-left: 0;
+      padding-right: 17px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .photo__details {
-    max-width: 940px;
-  }
-
-  .photo__like {
-    max-width: 940px;
-  }
+  //
 }

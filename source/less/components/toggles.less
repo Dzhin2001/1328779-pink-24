@@ -14,7 +14,6 @@
 
 .toggles__button {
   position: absolute;
-  background-color: fade(@dark-blue-color, 30%);
   .mixin-reset-margin();
   width: 6px;
   height: 6px;
@@ -22,8 +21,9 @@
   border: none;
   outline: none;
   cursor: pointer;
+  .mixin-behavior-toggle();
 
-  &--current {
+  &--active {
     background-color: @white-color;
     outline: 3px solid @dark-blue-color;
   }

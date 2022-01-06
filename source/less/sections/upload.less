@@ -6,60 +6,136 @@
   background-color: @white-color;
   .mixin-set-family-font(14px, 30px, 400);
   color: @dark-blue-color;
+  .mixin-flex-column();
   text-align: center;
-  margin: 0;
   padding-top: 50px;
 }
 
 .upload__wrapper {
   background-color: @grey-color;
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 .upload__photo {
   .mixin-flex-column();
-  padding: 0 20px;
 }
 
 .upload__editor {
-  .mixin-flex-column(space-between);
+  .mixin-flex-column(normal);
   padding: 0 20px 40px 20px;
 }
 
 .upload__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  .mixin-flex-row();
+  justify-content: space-around;
   .mixin-reset-list();
 }
 
-.upload__item {
-  .mixin-reset-margin();
-}
-
 .upload__bar {
+  position: relative;
+  background-color: @dark-blue-color;
+  height: 2px;
+  min-width: 240px;
+  margin: 20px auto;
   display: none;
 
   &--action {
     display: block;
   }
+
+  &--action::after {
+    content: "";
+    position: absolute;
+    bottom: -34px;
+    left: -40px;
+    height: 2px;
+    width: 320px;
+    background-color: fade(@dark-blue-color, 10%);
+  }
+}
+
+.upload__toggle {
+  position: absolute;
+  top: -6px;
+  left: 193px;
+  display: block;
+  .mixin-reset-margin();
+  width: 14px;
+  height: 14px;
+  background-color: @white-color;
+  border: 2px solid @pink-color;
+  border-radius: 50%;
+
+  &:active {
+    background-color: @pink-color;
+  }
 }
 
 .upload__icon {
-  //
+  width: 22px;
+  height: 22px;
+  .mixin-flex-column();
+  .mixin-svg-color(fade(@dark-blue-color, 30%));
+
+  &--active {
+    .mixin-svg-color(@pink-color);
+  }
+
+  &:hover:not(&--active) {
+    .mixin-svg-color(fade(@dark-blue-color, 50%));
+  }
 }
 
 .upload__buttons {
-  display: flex;
-  flex-direction: column;
+  padding-top: 34px;
 }
 
-.upload__button {
+.upload__button-load,
+.upload__button-cancel {
   .mixin-set-family-font(18px, 48px, 700);
-  min-width: 183px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: transparent;
+  text-transform: none;
+  margin: 6px 0;
+}
+
+.upload__button-load {
   color: @pink-color;
+  border: 3px solid @pink-color;
+
+  &:hover {
+    background-color: @pink-color;
+    color: @white-color;
+  }
+
+  &:focus {
+    //
+  }
+
+  &:active {
+    color: fade(@white-color, 30%);
+  }
+}
+
+.upload__button-cancel {
+  color: fade(@dark-blue-color, 10%);
+  border: 3px solid fade(@dark-blue-color, 10%);
+
+  &:hover {
+    color: fade(@dark-blue-color, 30%);
+    border: 3px solid fade(@dark-blue-color, 30%);
+  }
+
+  &:focus {
+    //
+  }
+
+  &:active {
+    border: 3px solid @dark-blue-color;
+    background-color: @dark-blue-color;
+    opacity: 30%;
+    color: fade(@white-color, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -68,31 +144,94 @@
   }
 
   .upload__wrapper {
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
+  .upload__editor {
+    .mixin-flex-column(normal);
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
   .upload__list {
-    display: flex;
-    flex-direction: column;
+    .mixin-flex-column(normal);
+    justify-content: space-around;
+    .mixin-reset-list();
   }
 
   .upload__item {
-    display: flex;
-    flex-direction: row;
+    .mixin-reset-margin();
+    .mixin-flex-row();
+    border-bottom: 2px solid fade(@dark-blue-color, 10%);
+  }
+
+  .upload__icon {
+    .mixin-svg-color(@pink-color);
+
+    &--active {
+      //
+    }
+
+    &:hover:not(&--active) {
+      //
+    }
   }
 
   .upload__bar {
     display: block;
+    min-width: 202px;
 
     &--action {
       display: none;
     }
   }
+
+  .upload__toggle {
+    &--crop {
+      left: 160px;
+    }
+
+    &--saturation {
+      left: 25px;
+    }
+
+    &--brightness {
+      left: 96px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .upload__item {
+    min-width: 410px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .upload__bar {
+    min-width: 288px;
+  }
+
   .upload__buttons {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 44px;
+  }
+
+  .upload__toggle {
+    &--crop {
+      left: 234px;
+    }
+
+    &--saturation {
+      left: 36px;
+    }
+
+    &--brightness {
+      left: 137px;
+    }
   }
 }

@@ -1,9 +1,8 @@
 .page-header {
   position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  z-index: 10;
   background-color: fade(@black-color, 30%);
+  top: 0;
+  width: 100%;
+  .mixin-flex-column();
 }
