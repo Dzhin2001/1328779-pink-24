@@ -12,17 +12,14 @@
     right: 0;
     bottom: 0;
     display: block;
-    background: @grey-blue-color url("../img/intro/intro-small.jpg") no-repeat top center;
-  }
-
-  &--with-example::after {
-    content: "";
-    position: relative;
-    right: 0;
-    bottom: 0;
-    background: url("../img/intro/example-medium.png") no-repeat right bottom;
-    min-height: 462px;
-    width: 100%;
+    background-color: @grey-blue-color;
+    background-image: url("../img/intro/intro-small.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/intro-small@2x.jpg");
+      background-size: 320px auto;
+    }
   }
 }
 
@@ -56,7 +53,12 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: @grey-blue-color url("../img/intro/intro-medium.jpg") no-repeat center/cover;
+      background-image: url("../img/intro/intro-medium.jpg");
+      background-position: center;
+      background-size: cover;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/intro-medium@2x.jpg");
+      }
     }
 
     &--with-example::after {
@@ -65,7 +67,13 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      background: url("../img/intro/example-medium.png") no-repeat right bottom;
+      background-image: url("../img/intro/example-medium.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/example-medium@2x.png");
+        background-size: 660px auto;
+      }
       min-height: 545px;
       width: 100%;
     }
@@ -88,11 +96,18 @@
 @media (min-width: @desktop-width) {
   .intro {
     &::before {
-      background: @grey-blue-color url("../img/intro/intro-big.jpg") no-repeat center/cover;
+      background-image: url("../img/intro/intro-big.jpg");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/intro-big@2x.jpg");
+      }
     }
 
     &--with-example::after {
-      background: url("../img/intro/example-big.png") no-repeat right bottom;
+      background-image: url("../img/intro/example-big.png");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/example-big@2x.png");
+        background-size: 1050px auto;
+      }
       min-height: 645px;
     }
   }
