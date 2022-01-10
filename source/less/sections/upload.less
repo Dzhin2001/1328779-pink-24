@@ -3,16 +3,21 @@
 }
 
 .upload__description {
-  background-color: @white-color;
+  position: relative;
+  .mixin-fill-background(@white-color, 0);
   .mixin-set-family-font(14px, 30px, 400);
   color: @dark-blue-color;
   .mixin-flex-column();
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .upload__wrapper {
-  background-color: @grey-color;
+  position: relative;
+  .mixin-fill-background(@grey-color, 0);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .upload__photo {
@@ -21,7 +26,7 @@
 
 .upload__editor {
   .mixin-flex-column(normal);
-  padding: 0 20px 40px 20px;
+  padding: 40px 20px 40px 20px;
 }
 
 .upload__list {
@@ -45,10 +50,11 @@
   &--action::after {
     content: "";
     position: absolute;
-    bottom: -34px;
-    left: -40px;
     height: 2px;
-    width: 320px;
+    width: 100vw;
+    left: 50%;
+    bottom: -34px;
+    transform: translateX(-50%);
     background-color: fade(@dark-blue-color, 10%);
   }
 }
@@ -139,13 +145,17 @@
 }
 
 @media (min-width: @tablet-width) {
-  .upload__description {
-    .mixin-set-family-font(18px, 30px, 400);
-  }
-
   .upload__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 57px;
+    padding-bottom: 57px;
+  }
+
+  .upload__description {
+    .mixin-set-family-font(18px, 30px, 400);
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   .upload__editor {
@@ -168,13 +178,14 @@
 
   .upload__icon {
     .mixin-svg-color(@pink-color);
+    pointer-events: none;
 
     &--active {
-      //
+      .mixin-svg-color(@pink-color);
     }
 
     &:hover:not(&--active) {
-      //
+      .mixin-svg-color(@pink-color);
     }
   }
 
@@ -192,17 +203,26 @@
       left: 160px;
     }
 
-    &--saturation {
+    &--brightness {
       left: 25px;
     }
 
-    &--brightness {
+    &--fill {
       left: 96px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .upload__wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+
+    &::before {
+      width: calc(100% - 40px);
+    }
+  }
+
   .upload__item {
     min-width: 410px;
 
@@ -226,11 +246,11 @@
       left: 234px;
     }
 
-    &--saturation {
-      left: 36px;
+    &--brightness {
+      left: 16px;
     }
 
-    &--brightness {
+    &--fill {
       left: 137px;
     }
   }
