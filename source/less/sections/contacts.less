@@ -49,7 +49,14 @@
   clip-path: polygon(50% 16.4%, 100% 0, 100% 100%, 0 100%, 0 0);
 
   &--no-js {
-    background: url("../img/map/map-small.jpg") no-repeat center/cover;
+    background-image: url("../img/map/map-small.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map/map-small@2x.jpg");
+    }
   }
 }
 
@@ -76,7 +83,11 @@
     height: 374px;
 
     &--no-js {
-      background: url("../img/map/map-medium.jpg") no-repeat center/cover;
+      background-image: url("../img/map/map-medium.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/map/map-medium@2x.jpg");
+      }
     }
   }
 }
@@ -100,7 +111,11 @@
     height: 502px;
 
     &--no-js {
-      background: url("../img/map/map-big.jpg") no-repeat center/cover;
+      background-image: url("../img/map/map-big.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/map/map-big@2x.jpg");
+      }
     }
   }
 }

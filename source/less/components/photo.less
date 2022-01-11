@@ -2,8 +2,22 @@
   //
 
   &--panorama {
+    position: relative;
     .mixin-flex-column();
-    //
+
+    &::after {
+      content: "ПАНОРАМА ДНЯ";
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(140px);
+      width: 130px;
+      min-height: 36px;
+      background-color: @pink-color;
+      color: @white-color;
+      .mixin-set-family-font(12px, 36px, 700);
+      text-align: center;
+    }
   }
 }
 
@@ -64,6 +78,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .photo {
+    &--panorama::after {
+      top: 57px;
+      right: 50%;
+      transform: translateX(310px);
+    }
+  }
+
   .photo__details {
     &--panorama {
       display: grid;
@@ -108,5 +130,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  //
+  .photo {
+    &--panorama::after {
+      top: 54px;
+      right: 50%;
+      transform: translateX(470px);
+    }
+  }
 }

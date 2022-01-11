@@ -100,3 +100,17 @@
     border-color: fade(@bh-color, 10%);
   }
 }
+
+.mixin-fill-background(@color: @grey-color, @top-padding: 100px) {
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background-color: @color;
+    width: 100vw;
+    top: -@top-padding;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -5,10 +5,17 @@
 }
 
 .get-application__example {
-  background: url("../img/intro/example-small.png") no-repeat center;
   display: block;
   min-height: 286px;
   width: 100%;
+  background-image: url("../img/intro/example-small.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro/example-small@2x.png");
+    background-size: 320px auto;
+  }
 }
 
 .get-application__wrapper {
