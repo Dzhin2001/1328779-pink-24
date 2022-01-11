@@ -8,7 +8,7 @@
   .mixin-flex-column();
 }
 
-.page-footer__logos {
+.page-footer__logo {
   padding: 40px 0;
   .mixin-svg-color(@dark-blue-color);
 
@@ -18,6 +18,12 @@
 
   &:active:not(&--active) {
     opacity: 30%;
+  }
+}
+
+.page-footer__logo-image {
+  &--big {
+    display: none;
   }
 }
 
@@ -46,5 +52,15 @@
 @media (min-width: @desktop-width) {
   .page-footer__HTMLAcademy-link {
     .mixin-set-family-font(18px, 34px, 400);
+  }
+
+  .page-footer__logo-image {
+    &--big {
+      display: inline;
+    }
+
+    &--middle {
+      display: none;
+    }
   }
 }
