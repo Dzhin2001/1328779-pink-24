@@ -5,7 +5,6 @@
 }
 
 .get-application__example {
-  display: block;
   min-height: 286px;
   width: 100%;
   background-image: url("../img/intro/example-small.png");
@@ -57,10 +56,14 @@
 }
 
 .get-application__item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   .mixin-reset-margin();
+  .mixin-flex-row();
+}
+
+.get-application__item-link {
+  text-decoration: none;
+  border: none;
+  margin: 0;
   padding: 16px;
 }
 
@@ -72,10 +75,36 @@
 
 @media (min-width: @tablet-width) {
   .get-application__example {
-    display: none;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/intro/example-medium.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/example-medium@2x.png");
+      background-size: 660px auto;
+    }
+    min-height: 545px;
+    width: 100%;
   }
 
   .get-application__wrapper {
     align-items: flex-start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .get-application__example {
+    background-image: url("../img/intro/example-big.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/example-big@2x.png");
+      background-size: 1050px auto;
+    }
+    min-height: 645px;
   }
 }

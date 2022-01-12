@@ -13,7 +13,7 @@
   padding-bottom: 50px;
 }
 
-.upload__wrapper {
+.upload__form {
   position: relative;
   .mixin-fill-background(@grey-color, 0);
   padding-top: 20px;
@@ -24,15 +24,58 @@
   .mixin-flex-column();
 }
 
-.upload__form {
+.upload__editor {
   .mixin-flex-column(normal);
   padding: 40px 20px 40px 20px;
 }
 
 .upload__list {
-  .mixin-flex-row();
-  justify-content: space-around;
+  position: relative;
+  .mixin-flex-column(center ,space-around);
   .mixin-reset-list();
+}
+
+.upload__icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: inherit;
+  .mixin-flex-column(center, center);
+  .mixin-svg-color(fade(@dark-blue-color, 30%));
+
+  &--crop {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--brightness {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--fill {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-100%);
+  }
+
+  &--active {
+    .mixin-svg-color(@pink-color);
+  }
+
+  &:hover:not(&--active) {
+    .mixin-svg-color(fade(@dark-blue-color, 50%));
+  }
+}
+
+.upload__image {
+  &--small {
+    display: none;
+  }
 }
 
 .upload__bar {
@@ -40,14 +83,14 @@
   background-color: @dark-blue-color;
   height: 2px;
   min-width: 240px;
-  margin: 20px auto;
+  margin: 60px auto 20px auto;
   display: none;
 
-  &--action {
+  &--active {
     display: block;
   }
 
-  &--action::after {
+  &--active::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -73,28 +116,6 @@
 
   &:active {
     background-color: @pink-color;
-  }
-}
-
-.upload__icon {
-  width: 44px;
-  height: 44px;
-  background-color: inherit;
-  .mixin-flex-column(center, center);
-  .mixin-svg-color(fade(@dark-blue-color, 30%));
-
-  &--active {
-    .mixin-svg-color(@pink-color);
-  }
-
-  &:hover:not(&--active) {
-    .mixin-svg-color(fade(@dark-blue-color, 50%));
-  }
-}
-
-.upload__image {
-  &--small {
-    display: none;
   }
 }
 
@@ -152,7 +173,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .upload__wrapper {
+  .upload__form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 57px;
@@ -165,7 +186,7 @@
     padding-bottom: 70px;
   }
 
-  .upload__form {
+  .upload__editor {
     .mixin-flex-column(normal);
     justify-content: space-between;
     padding: 0 20px;
@@ -184,6 +205,8 @@
   }
 
   .upload__icon {
+    position: static;
+    transform: none;
     width: 22px;
     height: 22px;
     .mixin-svg-color(@pink-color);
@@ -211,8 +234,9 @@
   .upload__bar {
     display: block;
     min-width: 202px;
+    margin-top: 20px;
 
-    &--action {
+    &::after {
       display: none;
     }
   }
@@ -233,7 +257,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .upload__wrapper {
+  .upload__form {
     padding-left: 80px;
     padding-right: 80px;
 

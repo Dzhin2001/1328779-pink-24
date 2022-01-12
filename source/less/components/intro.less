@@ -2,25 +2,14 @@
   position: relative;
   width: 100%;
   padding: @menu-height+24px 0 0 0;
+  background-color: @grey-blue-color;
+  background-image: url("../img/intro/intro-small.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
 
-  &::before {
-    z-index: -2;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background-color: @grey-blue-color;
-    background-image: url("../img/intro/intro-small.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/intro/intro-small@2x.jpg");
-      background-size: 320px auto;
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro/intro-small@2x.jpg");
+    background-size: 320px auto;
   }
 }
 
@@ -49,36 +38,12 @@
 
 @media (min-width: @tablet-width) {
   .intro {
-    &::before {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url("../img/intro/intro-medium.jpg");
-      background-position: center;
-      background-size: cover;
+    background-image: url("../img/intro/intro-medium.jpg");
+    background-position: center;
+    background-size: cover;
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/intro/intro-medium@2x.jpg");
-      }
-    }
-
-    &--with-example::after {
-      z-index: -1;
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      background-image: url("../img/intro/example-medium.png");
-      background-repeat: no-repeat;
-      background-position: right bottom;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/intro/example-medium@2x.png");
-        background-size: 660px auto;
-      }
-      min-height: 545px;
-      width: 100%;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/intro-medium@2x.jpg");
     }
   }
 
@@ -98,22 +63,10 @@
 
 @media (min-width: @desktop-width) {
   .intro {
-    &::before {
-      background-image: url("../img/intro/intro-big.jpg");
+    background-image: url("../img/intro/intro-big.jpg");
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/intro/intro-big@2x.jpg");
-      }
-    }
-
-    &--with-example::after {
-      background-image: url("../img/intro/example-big.png");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/intro/example-big@2x.png");
-        background-size: 1050px auto;
-      }
-      min-height: 645px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/intro-big@2x.jpg");
     }
   }
 

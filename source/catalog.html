@@ -34,18 +34,18 @@
           </svg>
         </a>
 
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--no-js" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <svg class="main-nav__toggle-image" width="50" height="24" role="img" aria-label="Кнопка открытия меню." fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.14 0C.99 0 .84.02.7.07S.43.2.33.3A.88.88 0 0 0 0 1v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 3V1a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 11v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 13v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Zm0 10c-.15 0-.3.02-.44.07s-.27.12-.37.22A.88.88 0 0 0 0 21v2c0 .27.12.52.33.7.22.2.5.3.8.3h47.73c.15 0 .3-.02.44-.07s.27-.12.37-.22A.88.88 0 0 0 50 23v-2a.94.94 0 0 0-.33-.7c-.22-.2-.5-.3-.8-.3H1.13Z"/>
           </svg>
-          <svg class="main-nav__toggle-image main-nav__toggle-image--closed" width="23" height="23" role="img" aria-label="Кнопка закрытия меню." fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="main-nav__toggle-image" width="23" height="23" role="img" aria-label="Кнопка закрытия меню." fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.85 0 0 20.85 2.15 23 23 2.15 20.85 0Z"/>
             <path d="M2.15 0 0 2.15 20.85 23 23 20.85 2.15 0Z"/>
           </svg>
         </button>
 
-        <ul class="main-nav__list main-nav__list--closed main-nav__list--no-js">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">
               Главная
@@ -281,83 +281,77 @@
         <h2 class="visually-hidden">Форма загрузки изображения.</h2>
         <p class="upload__description container">Затмите их всех! <br>Выкладывайте все, что накопилось в телефоне!</p>
 
-        <div class="upload__wrapper container">
+        <form class="upload__form container" action="https://echo.htmlacademy.ru" method="post">
 
-        <picture>
-          <source media="(min-width: 660px)" srcset="img/catalog/photo-upload-big.jpg 1x, img/catalog/photo-upload-big@2x.jpg 2x">
-          <img class="upload__photo" src="img/catalog/photo-upload-small.jpg"  srcset="img/catalog/photo-upload-small@2x.jpg 2x" alt="Фото для загрузки.">
-        </picture>
+          <picture>
+            <source media="(min-width: 660px)" srcset="img/catalog/photo-upload-big.jpg 1x, img/catalog/photo-upload-big@2x.jpg 2x">
+            <img class="upload__photo" src="img/catalog/photo-upload-small.jpg"  srcset="img/catalog/photo-upload-small@2x.jpg 2x" alt="Фото для загрузки.">
+          </picture>
 
-        <form class="upload__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="upload__editor">
 
-          <ul class="upload__list">
+            <ul class="upload__list">
 
-            <li class="upload__item">
-              <button class="button upload__icon upload__icon--crop upload__icon--active" type="button" name="icon-crop">
-                <svg class="upload__image upload__image--small" width="22" height="22" role="img" aria-label="Иконка Обрезки изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 14h2V6a2 2 0 0 0-2-2H8v2h8v8ZM6 16V0H4v4H0v2h4v10a2 2 0 0 0 2 2h10v4h2v-4h4v-2H6Z"/>
-                </svg>
-                <svg class="upload__image upload__image--big" width="44" height="44" role="img" aria-label="Иконка Обрезки изображения."  fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M32 28h4V12a4 4 0 0 0-4-4H16v4h16v16Zm-20 4V0H8v8H0v4h8v20a4 4 0 0 0 4 4h20v8h4v-8h8v-4H12Z"/>
-                </svg>
-              </button>
-              <div class="upload__bar upload__bar--crop upload__bar--active">
-                <button class="button upload__toggle upload__toggle--crop" type="button" name="toggle-crop">
-                  <span class="visually-hidden">Шкала изменений обрезки</span>
+              <li class="upload__item">
+                <button class="button upload__icon upload__icon--crop upload__icon--active" type="button" name="icon-crop">
+                  <svg class="upload__image upload__image--small" width="22" height="22" role="img" aria-label="Иконка Обрезки изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 14h2V6a2 2 0 0 0-2-2H8v2h8v8ZM6 16V0H4v4H0v2h4v10a2 2 0 0 0 2 2h10v4h2v-4h4v-2H6Z"/>
+                  </svg>
+                  <svg class="upload__image upload__image--big" width="44" height="44" role="img" aria-label="Иконка Обрезки изображения."  fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 28h4V12a4 4 0 0 0-4-4H16v4h16v16Zm-20 4V0H8v8H0v4h8v20a4 4 0 0 0 4 4h20v8h4v-8h8v-4H12Z"/>
+                  </svg>
                 </button>
-              </div>
-            </li>
+                <div class="upload__bar upload__bar--crop upload__bar--active">
+                  <button class="button upload__toggle upload__toggle--crop" type="button" name="toggle-crop">
+                    <span class="visually-hidden">Шкала изменений обрезки</span>
+                  </button>
+                </div>
+              </li>
 
-            <li class="upload__item">
-              <button class="button upload__icon upload__icon--brightness" type="button" name="icon-brightness">
-                <svg class="upload__image upload__image--small" width="24" height="22" role="img" aria-label="Иконка Яркости изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.56 9.15 7.62 0 6.2 1.45 8.6 3.88 3.44 9.15a1.55 1.55 0 0 0 0 2.17l5.5 5.63a1.48 1.48 0 0 0 2.12 0l5.5-5.63a1.55 1.55 0 0 0 0-2.17ZM5.21 10.23 10 5.33l4.8 4.9H5.2ZM19 11.77s-2 2.21-2 3.58c0 .54.21 1.06.59 1.45a1.98 1.98 0 0 0 2.82 0c.38-.39.59-.9.59-1.45 0-1.37-2-3.58-2-3.58ZM24 20.47H0V22h24v-1.53Z"/>
-                </svg>
-                <svg class="upload__image upload__image--big" width="48" height="43" role="img" aria-label="Иконка Яркости изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M33.12 17.88L15.24 0L12.41 2.83L17.17 7.59L6.88 17.88C6.3182 18.4425 6.00264 19.205 6.00264 20C6.00264 20.795 6.3182 21.5575 6.88 22.12L17.88 33.12C18.4425 33.6818 19.205 33.9974 20 33.9974C20.795 33.9974 21.5575 33.6818 22.12 33.12L33.12 22.12C33.6818 21.5575 33.9974 20.795 33.9974 20C33.9974 19.205 33.6818 18.4425 33.12 17.88ZM10.41 20L20 10.42L29.59 20H10.41ZM38 23C38 23 34 27.33 34 30C34 31.0609 34.4214 32.0783 35.1716 32.8284C35.9217 33.5786 36.9391 34 38 34C39.0609 34 40.0783 33.5786 40.8284 32.8284C41.5786 32.0783 42 31.0609 42 30C42 27.33 38 23 38 23Z"/>
-                  <path d="M48 40H0V43H48V40Z"/>
-                </svg>
-              </button>
-              <div class="upload__bar upload__bar--brightness">
-                <button class="button upload__toggle upload__toggle--brightness" type="button" name="toggle-brightness">
-                  <span class="visually-hidden">Шкала изменений контраста.</span>
+              <li class="upload__item">
+                <button class="button upload__icon upload__icon--brightness" type="button" name="icon-brightness">
+                  <svg class="upload__image upload__image--small" width="24" height="22" role="img" aria-label="Иконка Яркости изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.56 9.15 7.62 0 6.2 1.45 8.6 3.88 3.44 9.15a1.55 1.55 0 0 0 0 2.17l5.5 5.63a1.48 1.48 0 0 0 2.12 0l5.5-5.63a1.55 1.55 0 0 0 0-2.17ZM5.21 10.23 10 5.33l4.8 4.9H5.2ZM19 11.77s-2 2.21-2 3.58c0 .54.21 1.06.59 1.45a1.98 1.98 0 0 0 2.82 0c.38-.39.59-.9.59-1.45 0-1.37-2-3.58-2-3.58ZM24 20.47H0V22h24v-1.53Z"/>
+                  </svg>
+                  <svg class="upload__image upload__image--big" width="48" height="43" role="img" aria-label="Иконка Яркости изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33.12 17.88L15.24 0L12.41 2.83L17.17 7.59L6.88 17.88C6.3182 18.4425 6.00264 19.205 6.00264 20C6.00264 20.795 6.3182 21.5575 6.88 22.12L17.88 33.12C18.4425 33.6818 19.205 33.9974 20 33.9974C20.795 33.9974 21.5575 33.6818 22.12 33.12L33.12 22.12C33.6818 21.5575 33.9974 20.795 33.9974 20C33.9974 19.205 33.6818 18.4425 33.12 17.88ZM10.41 20L20 10.42L29.59 20H10.41ZM38 23C38 23 34 27.33 34 30C34 31.0609 34.4214 32.0783 35.1716 32.8284C35.9217 33.5786 36.9391 34 38 34C39.0609 34 40.0783 33.5786 40.8284 32.8284C41.5786 32.0783 42 31.0609 42 30C42 27.33 38 23 38 23Z"/>
+                    <path d="M48 40H0V43H48V40Z"/>
+                  </svg>
                 </button>
-              </div>
-            </li>
+                <div class="upload__bar upload__bar--brightness">
+                  <button class="button upload__toggle upload__toggle--brightness" type="button" name="toggle-brightness">
+                    <span class="visually-hidden">Шкала изменений контраста.</span>
+                  </button>
+                </div>
+              </li>
 
-            <li class="upload__item">
-              <button class="button upload__icon upload__icon--fill" type="button" name="icon-fill">
-                <svg class="upload__image upload__image--small" width="16" height="16" role="img" aria-label="Иконка Насыщенности изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 2a6 6 0 1 1 0 12A6 6 0 0 1 8 2Zm0-2a8 8 0 1 0 0 16A8 8 0 0 0 8 0Z"/>
-                  <path d="M8 12.14a4.26 4.26 0 0 0 0-8.5"/>
-                </svg>
-                <svg class="upload__image upload__image--big" width="32" height="32" role="img" aria-label="Иконка Насыщенности изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 4a12 12 0 1 1 0 24 12 12 0 0 1 0-24Zm0-4a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z"/>
-                  <path d="M16 24.29a8.52 8.52 0 0 0 0-17"/>
-                </svg>
-              </button>
-              <div class="upload__bar upload__bar--saturation">
-                <button class="button upload__toggle upload__toggle--fill" type="button" name="toggle-fill">
-                  <span class="visually-hidden">Шкала изменений заливки.</span>
+              <li class="upload__item">
+                <button class="button upload__icon upload__icon--fill" type="button" name="icon-fill">
+                  <svg class="upload__image upload__image--small" width="16" height="16" role="img" aria-label="Иконка Насыщенности изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 2a6 6 0 1 1 0 12A6 6 0 0 1 8 2Zm0-2a8 8 0 1 0 0 16A8 8 0 0 0 8 0Z"/>
+                    <path d="M8 12.14a4.26 4.26 0 0 0 0-8.5"/>
+                  </svg>
+                  <svg class="upload__image upload__image--big" width="32" height="32" role="img" aria-label="Иконка Насыщенности изображения." fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4a12 12 0 1 1 0 24 12 12 0 0 1 0-24Zm0-4a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z"/>
+                    <path d="M16 24.29a8.52 8.52 0 0 0 0-17"/>
+                  </svg>
                 </button>
-              </div>
-            </li>
+                <div class="upload__bar upload__bar--saturation">
+                  <button class="button upload__toggle upload__toggle--fill" type="button" name="toggle-fill">
+                    <span class="visually-hidden">Шкала изменений заливки.</span>
+                  </button>
+                </div>
+              </li>
 
-          </ul>
+            </ul>
 
-          <div class="upload__bar upload__bar--action">
-            <button class="button upload__toggle upload__toggle--action" type="button" name="toggle-action">
-              <span class="visually-hidden">Шкала изменений</span>
-            </button>
+            <div class="upload__buttons">
+              <button class="button upload__button-load" type="submit">Запостить</button>
+              <button class="button upload__button-cancel" type="reset">Отмена</button>
+            </div>
+
           </div>
-
-          <div class="upload__buttons">
-            <button class="button upload__button-load" type="submit">Запостить</button>
-            <button class="button upload__button-cancel" type="reset">Отмена</button>
-          </div>
-
-          </form>
-        </div>
+        </form>
       </section>
 
     </main>
@@ -407,7 +401,7 @@
           </li>
         </ul>
 
-        <a class="page-footer__HTMLAcademy-link" href="https://htmlacademy.ru">
+        <a class="page-footer__HTMLAcademy-link" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
           <svg width="27" height="34" role="img" aria-label="Лого HTML Academy." fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/>
