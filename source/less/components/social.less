@@ -5,15 +5,12 @@
 }
 
 .social__link {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  .mixin-flex-column(center, center);
   width: 48px;
   height: 48px;
   margin: 4px;
   .mixin-svg-color(@pink-color);
-  border: 3px solid fade(@dark-blue-color, 30%);
+  border: 3px solid fade(@dark-blue-color, 10%);
   border-radius: 50%;
 
   &:hover:not(&--active) {
@@ -25,6 +22,7 @@
   }
 
   &:active:not(&--active) {
+    border: 3px solid fade(@dark-blue-color, 10%);
     opacity: 30%;
   }
 }
