@@ -11,14 +11,7 @@
 .page-footer__logo {
   padding: 40px 0;
   .mixin-svg-color(@dark-blue-color);
-
-  &:hover:not(&--active) {
-    .mixin-svg-color(@pink-color);
-  }
-
-  &:active:not(&--active) {
-    opacity: 30%;
-  }
+  .mixin-behavior-logo(@pink-color, @dark-blue-color, 30%);
 }
 
 .page-footer__logo-image {
