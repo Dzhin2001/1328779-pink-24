@@ -8,10 +8,7 @@
     <link rel="apple-touch-icon" href="img/favicons/apple-152.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c48b2710-db3a-4e6b-953c-138b7cf1c2f4" type="text/javascript"></script>
-    <script src="js/mapbasics.js" type="text/javascript"></script>
-    <script src="js/menu-nav.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body class="page__body">
@@ -74,19 +71,13 @@
     </header>
 
     <main class="page-main">
-      <div class="intro intro--with-example">
+      <div class="intro">
         <h1 class="visually-hidden">Сайт хорошего настроения PINK.</h1>
-        <div class="intro__wrapper intro__wrapper--half-size container">
-          <p class="intro__title intro__title--half-size">Взгляните на жизнь иначе!</p>
-        </div>
-
-        <section class="get-application get-application">
+        <div class="intro__wrapper intro__wrapper--main-page">
           <h2 class="visually-hidden">Загрузите приложение PINK.</h2>
-            <div class="get-application__example">
-              <span class="visually-hidden">Пример экрана приложения.</span>
-            </div>
-          <div class="get-application__wrapper get-application__wrapper--half-size container">
-            <div class="get-application__load">
+          <div class="intro__wrapper-inner intro__wrapper-inner--main-page container">
+            <p class="intro__title intro__title--main-page">Взгляните на жизнь иначе!</p>
+            <section class="get-application">
               <a class="get-application__link" href="https://www.apple.com/ru/store">Скачать приложение</a>
               <ul class="get-application__list">
                 <li class="get-application__item">
@@ -106,10 +97,9 @@
                 </li>
               </ul>
               <p class="get-application__note">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
-            </div>
+            </section>
           </div>
-        </section>
-
+        </div>
       </div>
 
       <section class="advantages">
@@ -393,5 +383,9 @@
 
       </div>
     </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c48b2710-db3a-4e6b-953c-138b7cf1c2f4" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+
   </body>
 </html>

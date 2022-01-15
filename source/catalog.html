@@ -8,8 +8,7 @@
     <link rel="apple-touch-icon" href="img/favicons/apple-152.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <script src="js/menu-nav.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body class="page__body">
@@ -74,14 +73,17 @@
     <main class="page-main">
       <div class="intro">
         <h1  class="visually-hidden">Просмотр и загрузка фотографий.</h1>
-        <div class="intro__wrapper container">
-          <p class="intro__title">Фотографии <br>пользователей</p>
+        <div class="intro__wrapper">
+          <h2 class="visually-hidden">Загрузите приложение PINK.</h2>
+          <div class="intro__wrapper-inner container">
+            <p class="intro__title">Фотографии <br>пользователей</p>
+          </div>
         </div>
       </div>
 
       <section class="gallery">
         <h2 class="visually-hidden">Галерея фотографий пользователей.</h2>
-        <p class="gallery__description container">Взгляните на фотографии, которые выкладывают пользователи! <span class="gallery__description--br">Видите, как не хватает ваших?</span></p>
+        <p class="gallery__description container">Взгляните на фотографии, которые выкладывают пользователи! <span class="gallery__br">Видите, как не хватает ваших?</span></p>
 
         <div class="gallery__panorama photo photo--panorama">
 
@@ -281,7 +283,7 @@
         <h2 class="visually-hidden">Форма загрузки изображения.</h2>
         <p class="upload__description container">Затмите их всех! <br>Выкладывайте все, что накопилось в телефоне!</p>
 
-        <form class="upload__form container" action="https://echo.htmlacademy.ru" method="post">
+        <form class="upload__form container" action="https://echo.htmlacademy.ru" enctype="multipart/form-data" method="post">
 
           <picture>
             <source media="(min-width: 660px)" srcset="img/catalog/photo-upload-big.jpg 1x, img/catalog/photo-upload-big@2x.jpg 2x">
@@ -346,6 +348,7 @@
             </ul>
 
             <div class="upload__buttons">
+              <input  class="visually-hidden" type="file" name="upload-file">
               <button class="button upload__button-load" type="submit">Запостить</button>
               <button class="button upload__button-cancel" type="reset">Отмена</button>
             </div>
@@ -410,6 +413,9 @@
 
       </div>
     </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c48b2710-db3a-4e6b-953c-138b7cf1c2f4" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 
   </body>
 </html>

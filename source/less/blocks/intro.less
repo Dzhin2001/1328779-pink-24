@@ -1,5 +1,4 @@
 .intro {
-  position: relative;
   width: 100%;
   padding: @menu-height+24px 0 0 0;
   background-color: @grey-blue-color;
@@ -14,11 +13,31 @@
 }
 
 .intro__wrapper {
-  .mixin-flex-column();
+  position: relative;
+  z-index: 2;
+  width: 100%;
 
-  &--half-size {
-    align-items: flex-start;
+  &--main-page::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 85px;
+    left: 0;
+    height: 286px;
+    width: 100%;
+    background-image: url("../img/intro/example-small.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro/example-small@2x.png");
+      background-size: 320px auto;
+    }
   }
+}
+
+.intro__wrapper-inner {
+  .mixin-flex-column();
 }
 
 .intro__title {
@@ -29,7 +48,7 @@
   padding-top: 6px;
   padding-bottom: 45px;
 
-  &--half-size {
+  &--main-page {
     max-width: 280px;
     padding-top: 0;
     padding-bottom: 30px;
@@ -47,12 +66,37 @@
     }
   }
 
+  .intro__wrapper {
+    &--main-page::before {
+      top: auto;
+      left: auto;
+      right: 0;
+      bottom: 0;
+      background-image: url("../img/intro/example-medium.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/example-medium@2x.png");
+        background-size: 660px auto;
+      }
+      min-height: 545px;
+      width: 100%;
+    }
+
+    .intro__wrapper-inner {
+      &--main-page {
+        align-items: flex-start;
+      }
+    }
+  }
+
   .intro__title {
     .mixin-set-family-font(50px, 68px, 300);
     padding-top: 88px;
     padding-bottom: 58px;
 
-    &--half-size {
+    &--main-page {
       .mixin-set-family-font(40px, 48px, 300);
       padding-top: 122px;
       padding-bottom: 70px;
@@ -60,13 +104,24 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   .intro {
     background-image: url("../img/intro/intro-big.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro/intro-big@2x.jpg");
+    }
+  }
+
+  .intro__wrapper {
+    &--main-page::before {
+      background-image: url("../img/intro/example-big.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/intro/example-big@2x.png");
+        background-size: 1050px auto;
+      }
+      min-height: 645px;
     }
   }
 

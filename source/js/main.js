@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // menu-nav
+  let navToggle = document.querySelector('.main-nav__toggle');
+  navToggle.classList.remove('main-nav__toggle--no-js');
+  navToggle.addEventListener('click', function() {
+    navToggle.classList.toggle('main-nav__toggle--closed');
+  });
+
+  // map
   let center = [59.938635, 30.323122];
   let navMain = document.querySelector('.contacts__map');
   navMain.classList.remove('contacts__map--no-js');
@@ -8,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
       center: center,
       zoom: 16
     });
-
     map.geoObjects
       .add(new ymaps.Placemark([59.938635, 30.323122], {
         balloonContent: '<strong>html Academy</strong>',
@@ -17,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         preset: 'islands#redCircleDotIconWithCaption',
         iconCaptionMaxWidth: '50'
       }));
-
     map.controls.remove('geolocationControl'); // удаляем геолокацию
     map.controls.remove('searchControl'); // удаляем поиск
     map.controls.remove('trafficControl'); // удаляем контроль трафика
@@ -26,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     map.controls.remove('zoomControl'); // удаляем контрол зуммирования
     map.controls.remove('rulerControl'); // удаляем контрол правил
     map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-
   }
 
   ymaps.ready(init);

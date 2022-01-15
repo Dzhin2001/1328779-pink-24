@@ -8,8 +8,7 @@
     <link rel="apple-touch-icon" href="img/favicons/apple-152.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <script src="js/menu-nav.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body class="page__body">
@@ -74,15 +73,18 @@
     <main class="page-main">
       <div class="intro">
         <h1 class="visually-hidden">Форма для участия в конкурсе.</h1>
-        <div class="intro__wrapper container">
-          <p class="intro__title">Конкурс на самое безбашенное<br> путешествие с Пинк</p>
+        <div class="intro__wrapper">
+          <h2 class="visually-hidden">Загрузите приложение PINK.</h2>
+          <div class="intro__wrapper-inner container">
+            <p class="intro__title">Конкурс на самое безбашенное<br> путешествие с Пинк</p>
+          </div>
         </div>
       </div>
 
       <section class="form container">
         <h2 class="visually-hidden">Заполнение формы.</h2>
         <p class="form__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-          <span class="form__description--add">Пожалуйста, заполните форму ниже:</span>
+          <span class="form__add-description">Пожалуйста, заполните форму ниже:</span>
         </p>
 
         <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
@@ -183,7 +185,7 @@
 
           <div class="form__buttons">
             <button class="button form__button-submit" type="submit">Отправить форму</button>
-            <p class="form__footnote"><span class="form__footnote--reference">*</span> — обязательные <span class="form__footnote--add">для заполнения </span>поля</p>
+            <p class="form__footnote"><span class="form__reference">*</span> — обязательные <span class="form__add-footnote">для заполнения </span>поля</p>
           </div>
         </form>
 
@@ -266,6 +268,9 @@
 
       </div>
     </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c48b2710-db3a-4e6b-953c-138b7cf1c2f4" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 
   </body>
 </html>
