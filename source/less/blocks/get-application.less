@@ -1,30 +1,6 @@
 .get-application {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-
-.get-application__example {
-  display: block;
-  min-height: 286px;
-  width: 100%;
-  background-image: url("../img/intro/example-small.png");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/intro/example-small@2x.png");
-    background-size: 320px auto;
-  }
-}
-
-.get-application__wrapper {
   .mixin-flex-column();
-}
-
-.get-application__load {
-  .mixin-flex-column();
-  padding-top: 20px;
+  padding-top: 320px;
   padding-bottom: 20px;
   min-height: 271px;
 }
@@ -57,10 +33,14 @@
 }
 
 .get-application__item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   .mixin-reset-margin();
+  .mixin-flex-row();
+}
+
+.get-application__item-link {
+  text-decoration: none;
+  border: none;
+  margin: 0;
   padding: 16px;
 }
 
@@ -71,11 +51,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .get-application__example {
-    display: none;
-  }
-
-  .get-application__wrapper {
-    align-items: flex-start;
+  .get-application {
+    padding-top: 20px;
   }
 }

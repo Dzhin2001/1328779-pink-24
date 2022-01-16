@@ -13,10 +13,10 @@
   text-align: center;
   padding-top: 45px;
   padding-bottom: 26px;
+}
 
-  &--add {
-    display: none;
-  }
+.form__add-description {
+  display: none;
 }
 
 .form__fieldset { // LEGEND
@@ -220,24 +220,25 @@
   color: @dark-blue-color;
   margin: 0;
   padding: 40px 0 0 0;
+}
 
-  &--reference {
-    color: @pink-color;
-  }
+.form__reference {
+  color: @pink-color;
+}
 
-  &--add {
-    display: none;
-  }
+.form__add-footnote {
+  color: @dark-blue-color;
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .form__description {
     .mixin-set-family-font(18px, 30px, 400);
     padding: 92px 40px 55px 40px;
+  }
 
-    &--add {
-      display: inline;
-    }
+  .form__add-description {
+    display: inline-block;
   }
 
   .form__form {
@@ -410,6 +411,10 @@
     row-gap: 50px;
   }
 
+  .form__add-description {
+    display: inline;
+  }
+
   .form__fieldset {
     &--full-name {
       grid-column: 1 / 2;
@@ -475,10 +480,7 @@
     grid-row: -1 / -2;
   }
 
-  .form__footnote {
-    &--add {
-      display: inline;
-      color: @dark-blue-color;
-    }
+  .form__add-footnote {
+    display: inline;
   }
 }
