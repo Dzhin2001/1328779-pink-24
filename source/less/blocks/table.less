@@ -44,7 +44,34 @@
   align-items: center;
   padding: 15px 15px 15px 17px;
   text-align: left;
+
+  &--yes > .table__icon {
+    width: 31px;
+    height: 21px;
+
+    & > .table__icon-yes {
+      fill: @table-green-color;
+    }
+
+    & > .table__icon-no {
+      fill: transparent;
+    }
+  }
+
+  &--no > .table__icon {
+    width: 27px;
+    height: 27px;
+
+    & > .table__icon-yes {
+      fill: transparent;
+    }
+
+    & > .table__icon-no {
+      fill: @table-red-color;
+    }
+  }
 }
+
 // SPANS
 .table__tariff {
   display: block;

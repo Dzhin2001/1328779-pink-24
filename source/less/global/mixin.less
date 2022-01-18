@@ -72,14 +72,14 @@
 .mixin-behavior-logo(@bh-color: @pink-color, @ba-color: @white-color, @perc: 30%) {
   &:hover:not(&--active) {
     color: @bh-color;
-    .mixin-svg-color(@bh-color);
-    .mixin-border-color(@bh-color);
+    //.mixin-svg-color(@bh-color);
+    //.mixin-border-color(@bh-color);
   }
 
   &:active:not(&--active) {
     color: @ba-color;
-    .mixin-svg-color(@ba-color);
-    .mixin-border-color(@ba-color);
+    //.mixin-svg-color(@ba-color);
+    //.mixin-border-color(@ba-color);
     opacity: @perc;
   }
 }
@@ -87,19 +87,13 @@
 .mixin-behavior-menu(@bh-color: @pink-color, @ba-color: @white-color, @perc: 30%) {
   &:hover:not(&--active) {
     color: @bh-color;
-    .mixin-svg-color(@bh-color);
-    .mixin-border-color(@bh-color);
   }
 
   &:active:not(&--active) {
     color: fade(@bh-color, @perc);
-    .mixin-svg-color(fade(@bh-color, @perc));
-    .mixin-border-color(fade(@bh-color, @perc));
 
     @media (min-width: @desktop-width) {
       color: @ba-color;
-      .mixin-svg-color(@ba-color);
-      .mixin-border-color(@ba-color);
       opacity: @perc;
     }
   }

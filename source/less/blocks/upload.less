@@ -35,13 +35,13 @@
   .mixin-reset-list();
 }
 
-.upload__icon {
+.upload__button-editor {
   display: block;
   width: 44px;
   height: 44px;
   background-color: inherit;
   .mixin-flex-column(center, center);
-  .mixin-svg-color(fade(@dark-blue-color, 30%));
+  color: fade(@dark-blue-color, 30%);
 
   &--crop {
     position: absolute;
@@ -64,18 +64,38 @@
   }
 
   &--active {
-    .mixin-svg-color(@pink-color);
+    color: @pink-color;
   }
 
   &:hover:not(&--active) {
-    .mixin-svg-color(fade(@dark-blue-color, 50%));
+    color: fade(@dark-blue-color, 50%);
   }
 }
 
-.upload__image {
-  &--small {
-    display: none;
+
+.upload__icon {
+  &--crop {
+    width: 44px;
+    height: 44px;
   }
+
+  &--brightness {
+    width: 48px;
+    height: 43px;
+  }
+
+  &--fill {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.upload__icon-small {
+  fill: transparent;
+}
+
+.upload__icon-big {
+  fill: currentColor;
 }
 
 .upload__bar {
@@ -204,31 +224,46 @@
     border-bottom: 2px solid fade(@dark-blue-color, 10%);
   }
 
-  .upload__icon {
+  .upload__button-editor {
     position: static;
     transform: none;
     width: 22px;
     height: 22px;
-    .mixin-svg-color(@pink-color);
+    color: @pink-color;
     pointer-events: none;
 
     &--active {
-      .mixin-svg-color(@pink-color);
+      color: @pink-color;
     }
 
     &:hover:not(&--active) {
-      .mixin-svg-color(@pink-color);
+      color: @pink-color;
     }
   }
 
-  .upload__image {
-    &--small {
-      display: block;
+  .upload__icon {
+    &--crop {
+      width: 22px;
+      height: 22px;
     }
 
-    &--big {
-      display: none;
+    &--brightness {
+      width: 24px;
+      height: 22px;
     }
+
+    &--fill {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .upload__icon-small {
+    fill: currentColor;
+  }
+
+  .upload__icon-big {
+    fill: transparent;
   }
 
   .upload__bar {
@@ -266,7 +301,7 @@
     }
   }
 
-  .upload__icon {
+  .upload__button-editor {
     width: 44px;
     height: 44px;
   }
@@ -279,14 +314,29 @@
     }
   }
 
-  .upload__image {
-    &--small {
-      display: none;
+  .upload__icon {
+    &--crop {
+      width: 44px;
+      height: 44px;
     }
 
-    &--big {
-      display: block;
+    &--brightness {
+      width: 48px;
+      height: 43px;
     }
+
+    &--fill {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .upload__icon-small {
+    fill: transparent;
+  }
+
+  .upload__icon-big {
+    fill: currentColor;
   }
 
   .upload__bar {

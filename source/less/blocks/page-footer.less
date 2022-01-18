@@ -10,14 +10,31 @@
 
 .page-footer__logo {
   padding: 40px 0;
-  .mixin-svg-color(@dark-blue-color);
+}
+
+.page-footer__logo-link {
+  color: @dark-blue-color;
   .mixin-behavior-logo(@pink-color, @dark-blue-color, 30%);
 }
 
-.page-footer__logo-image {
-  &--big {
-    display: none;
-  }
+.page-footer__icon {
+  width: 145px;
+  height: 40px;
+}
+
+.page-footer__icon-middle-pink {
+  fill: currentColor;
+}
+
+.page-footer__icon-middle-glasses {
+  fill: @pink-color;
+}
+
+.page-footer__icon-big-pink,
+.page-footer__icon-big-spot,
+.page-footer__icon-big-glasses,
+.page-footer__icon-big-stars {
+  fill: transparent;
 }
 
 .page-footer__social-list {
@@ -47,13 +64,23 @@
     .mixin-set-family-font(18px, 34px, 400);
   }
 
-  .page-footer__logo-image {
-    &--big {
-      display: inline;
-    }
+  .page-footer__icon {
+    width: 147px;
+    height: 40px;
+  }
 
-    &--middle {
-      display: none;
-    }
+  .page-footer__icon-middle-pink,
+  .page-footer__icon-middle-glasses {
+    fill: transparent;
+  }
+
+  .page-footer__icon-big-spot,
+  .page-footer__icon-big-glasses {
+    fill: @pink-color;
+  }
+
+  .page-footer__icon-big-pink,
+  .page-footer__icon-big-stars {
+    fill: currentColor;
   }
 }

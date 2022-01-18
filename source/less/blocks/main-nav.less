@@ -7,24 +7,35 @@
   padding-bottom: 18px;
 }
 
-.main-nav__logo {
+.main-nav__logo-link {
   z-index: 12;
   background-color: transparent;
-  .mixin-svg-color(@white-color);
+  color: @white-color;
   .mixin-behavior-logo();
 }
 
-.main-nav__logo-image {
-  &--middle,
-  &--big {
-    display: none;
-  }
+.main-nav__logo-icon {
+  width: 74px;
+  height: 23px;
+}
+
+.main-nav__icon-small {
+  fill: currentColor;
+}
+
+.main-nav__icon-middle-pink,
+.main-nav__icon-middle-glasses,
+.main-nav__icon-big-pink,
+.main-nav__icon-big-spot,
+.main-nav__icon-big-glasses,
+.main-nav__icon-big-stars {
+  fill: transparent;
 }
 
 .main-nav__toggle {
   z-index: 12;
   background-color: transparent;
-  .mixin-svg-color(@white-color);
+  color: @white-color;
   .mixin-reset-margin();
   border: none;
   .mixin-behavior-menu();
@@ -35,22 +46,28 @@
 }
 
 .main-nav__toggle-image {
-  &:not(:last-child) {
-    display: none;
+  width: 23px;
+  height: 23px;
+
+  & > .main-nav__icon-burger {
+    fill: transparent;
   }
 
-  &:last-child {
-    display: inline;
+  & > .main-nav__icon-cross {
+    fill: currentColor;
   }
 }
 
 .main-nav__toggle--closed > .main-nav__toggle-image {
-  &:not(:last-child) {
-    display: inline;
+  width: 50px;
+  height: 24px;
+
+  & > .main-nav__icon-burger {
+    fill: currentColor;
   }
 
-  &:last-child {
-    display: none;
+  & > .main-nav__icon-cross {
+    fill: transparent;
   }
 }
 
@@ -75,7 +92,6 @@
 .main-nav__toggle--no-js + .main-nav__list {
   display: block;
 }
-
 
 .main-nav__item {
   background-color: @dark-blue-color;
@@ -106,14 +122,17 @@
     height: 40px;
   }
 
-  .main-nav__logo-image {
-    &--small {
-      display: none;
-    }
+  .main-nav__icon-middle-pink,
+  .main-nav__icon-middle-glasses {
+    fill: currentColor;
+  }
 
-    &--middle {
-      display: inline;
-    }
+  .main-nav__icon-small,
+  .main-nav__icon-big-pink,
+  .main-nav__icon-big-spot,
+  .main-nav__icon-big-glasses,
+  .main-nav__icon-big-stars {
+    fill: transparent;
   }
 
   .main-nav__list {
@@ -133,14 +152,20 @@
     height: 40px;
   }
 
-  .main-nav__logo-image {
-    &--middle {
-      display: none;
-    }
+  .main-nav__icon-big-pink,
+  .main-nav__icon-big-glasses {
+    fill: currentColor;
+  }
 
-    &--big {
-      display: inline;
-    }
+  .main-nav__icon-big-spot,
+  .main-nav__icon-big-stars {
+    fill: @pink-color;
+  }
+
+  .main-nav__icon-middle-pink,
+  .main-nav__icon-middle-glasses,
+  .main-nav__icon-small {
+    fill: transparent;
   }
 
   .main-nav__toggle {
