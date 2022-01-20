@@ -46,28 +46,22 @@
   text-align: left;
 
   &--yes > .table__icon {
-    width: 31px;
-    height: 21px;
-
-    & > .table__icon-yes {
-      fill: @table-green-color;
+    &--yes {
+      display: block;
     }
 
-    & > .table__icon-no {
-      fill: transparent;
+    &--no {
+      display: none;
     }
   }
 
   &--no > .table__icon {
-    width: 27px;
-    height: 27px;
-
-    & > .table__icon-yes {
-      fill: transparent;
+    &--yes {
+      display: none;
     }
 
-    & > .table__icon-no {
-      fill: @table-red-color;
+    &--no {
+      display: block;
     }
   }
 }

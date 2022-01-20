@@ -14,22 +14,13 @@
   .mixin-behavior-logo();
 }
 
-.main-nav__logo-icon {
-  width: 74px;
-  height: 23px;
-}
-
 .main-nav__icon-small {
-  fill: currentColor;
+  display: block;
 }
 
-.main-nav__icon-middle-pink,
-.main-nav__icon-middle-glasses,
-.main-nav__icon-big-pink,
-.main-nav__icon-big-spot,
-.main-nav__icon-big-glasses,
-.main-nav__icon-big-stars {
-  fill: transparent;
+.main-nav__icon-middle,
+.main-nav__icon-big {
+  display: none;
 }
 
 .main-nav__toggle {
@@ -45,29 +36,21 @@
   }
 }
 
-.main-nav__toggle-image {
-  width: 23px;
-  height: 23px;
-
-  & > .main-nav__icon-burger {
-    fill: transparent;
-  }
-
-  & > .main-nav__icon-cross {
-    fill: currentColor;
-  }
+.main-nav__icon-burger {
+  display: none;
 }
 
-.main-nav__toggle--closed > .main-nav__toggle-image {
-  width: 50px;
-  height: 24px;
+.main-nav__icon-cross {
+  display: block;
+}
 
+.main-nav__toggle--closed {
   & > .main-nav__icon-burger {
-    fill: currentColor;
+    display: block;
   }
 
   & > .main-nav__icon-cross {
-    fill: transparent;
+    display: none;
   }
 }
 
@@ -117,22 +100,16 @@
     padding-bottom: 40px;
   }
 
-  .main-nav__logo-icon {
-    width: 145px;
-    height: 40px;
+  .main-nav__icon-small {
+    display: none;
   }
 
-  .main-nav__icon-middle-pink,
-  .main-nav__icon-middle-glasses {
-    fill: currentColor;
+  .main-nav__icon-middle {
+    display: block;
   }
 
-  .main-nav__icon-small,
-  .main-nav__icon-big-pink,
-  .main-nav__icon-big-spot,
-  .main-nav__icon-big-glasses,
-  .main-nav__icon-big-stars {
-    fill: transparent;
+  .main-nav__icon-big {
+    display: none;
   }
 
   .main-nav__list {
@@ -147,25 +124,13 @@
     padding-bottom: 29px;
   }
 
-  .main-nav__logo-icon {
-    width: 147px;
-    height: 40px;
+  .main-nav__icon-small,
+  .main-nav__icon-middle {
+    display: none;
   }
 
-  .main-nav__icon-big-pink,
-  .main-nav__icon-big-glasses {
-    fill: currentColor;
-  }
-
-  .main-nav__icon-big-spot,
-  .main-nav__icon-big-stars {
-    fill: @pink-color;
-  }
-
-  .main-nav__icon-middle-pink,
-  .main-nav__icon-middle-glasses,
-  .main-nav__icon-small {
-    fill: transparent;
+  .main-nav__icon-big {
+    display: block;
   }
 
   .main-nav__toggle {

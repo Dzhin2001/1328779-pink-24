@@ -13,35 +13,24 @@
 }
 
 .page-footer__logo-link {
+  background-color: transparent;
   color: @dark-blue-color;
   .mixin-behavior-logo(@pink-color, @dark-blue-color, 30%);
 }
 
-.page-footer__icon {
-  width: 145px;
-  height: 40px;
+.page-footer__icon-small {
+  display: block;
 }
 
-.page-footer__icon-middle-pink {
-  fill: currentColor;
-}
-
-.page-footer__icon-middle-glasses {
-  fill: @pink-color;
-}
-
-.page-footer__icon-big-pink,
-.page-footer__icon-big-spot,
-.page-footer__icon-big-glasses,
-.page-footer__icon-big-stars {
-  fill: transparent;
+.page-footer__icon-big {
+  display: none;
 }
 
 .page-footer__social-list {
   // social.less
 }
 
-.page-footer__HTMLAcademy-link {
+.page-footer__htmlacademy {
   display: grid;
   grid-template-columns: min-content min-content;
   gap: 12px;
@@ -49,6 +38,10 @@
   .mixin-svg-color(@pink-color);
   color: @dark-blue-color;
   padding: 40px 0;
+}
+
+.page-footer__htmlacademy-link {
+  color: @pink-color;
   .mixin-behavior(@dark-blue-color);
 }
 
@@ -60,27 +53,14 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer__HTMLAcademy-link {
+  .page-footer__htmlacademy {
     .mixin-set-family-font(18px, 34px, 400);
   }
 
-  .page-footer__icon {
-    width: 147px;
-    height: 40px;
+  .page-footer__icon-small {
+    display: none;
   }
 
-  .page-footer__icon-middle-pink,
-  .page-footer__icon-middle-glasses {
-    fill: transparent;
-  }
-
-  .page-footer__icon-big-spot,
-  .page-footer__icon-big-glasses {
-    fill: @pink-color;
-  }
-
-  .page-footer__icon-big-pink,
-  .page-footer__icon-big-stars {
-    fill: currentColor;
-  }
-}
+  .page-footer__icon-big {
+    display: block;
+  }}

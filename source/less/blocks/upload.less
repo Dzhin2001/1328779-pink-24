@@ -49,14 +49,14 @@
     left: 0;
   }
 
-  &--brightness {
+  &--fill {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  &--fill {
+  &--contrast {
     position: absolute;
     top: 0;
     left: 100%;
@@ -74,28 +74,15 @@
 
 
 .upload__icon {
-  &--crop {
-    width: 44px;
-    height: 44px;
+  color: currentColor;
+
+  &--small {
+    display: none;
   }
 
-  &--brightness {
-    width: 48px;
-    height: 43px;
+  &--big {
+    display: block;
   }
-
-  &--fill {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-.upload__icon-small {
-  fill: transparent;
-}
-
-.upload__icon-big {
-  fill: currentColor;
 }
 
 .upload__bar {
@@ -242,28 +229,13 @@
   }
 
   .upload__icon {
-    &--crop {
-      width: 22px;
-      height: 22px;
+    &--small {
+      display: block;
     }
 
-    &--brightness {
-      width: 24px;
-      height: 22px;
+    &--big {
+      display: none;
     }
-
-    &--fill {
-      width: 16px;
-      height: 16px;
-    }
-  }
-
-  .upload__icon-small {
-    fill: currentColor;
-  }
-
-  .upload__icon-big {
-    fill: transparent;
   }
 
   .upload__bar {
@@ -281,7 +253,7 @@
       left: 160px;
     }
 
-    &--brightness {
+    &--contrast {
       left: 25px;
     }
 
@@ -315,28 +287,13 @@
   }
 
   .upload__icon {
-    &--crop {
-      width: 44px;
-      height: 44px;
+    &--small {
+      display: none;
     }
 
-    &--brightness {
-      width: 48px;
-      height: 43px;
+    &--big {
+      display: block;
     }
-
-    &--fill {
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  .upload__icon-small {
-    fill: transparent;
-  }
-
-  .upload__icon-big {
-    fill: currentColor;
   }
 
   .upload__bar {
@@ -354,7 +311,7 @@
       left: 234px;
     }
 
-    &--brightness {
+    &--contrast {
       left: 16px;
     }
 
