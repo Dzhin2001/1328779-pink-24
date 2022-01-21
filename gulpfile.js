@@ -150,6 +150,13 @@ export const build = gulp.series(
   ),
 );
 
+// Start
+
+export const start = gulp.series(
+  build,
+  server,
+);
+
 // Default
 
 export default gulp.series(
