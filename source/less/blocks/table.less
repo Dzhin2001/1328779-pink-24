@@ -45,24 +45,20 @@
   padding: 15px 15px 15px 17px;
   text-align: left;
 
-  &--yes > .table__icon {
-    &--yes {
-      display: block;
-    }
-
-    &--no {
-      display: none;
-    }
+  &--yes > .table__icon-yes {
+    display: block;
   }
 
-  &--no > .table__icon {
-    &--yes {
-      display: none;
-    }
+  &--yes > .table__icon-no {
+    display: none;
+  }
 
-    &--no {
-      display: block;
-    }
+  &--no > .table__icon-yes {
+    display: none;
+  }
+
+  &--no > .table__icon-no {
+    display: block;
   }
 }
 
