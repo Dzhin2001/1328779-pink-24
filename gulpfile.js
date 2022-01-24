@@ -32,6 +32,7 @@ const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
@@ -39,6 +40,7 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/main.js')
+    .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -87,8 +89,9 @@ const sprite = () => {
 
 const copy = (done) => {
   gulp.src([
+    'source/favicons/*.{ico,png,svg}',
     'source/fonts/*.{woff2,woff}',
-    'source/*.ico',
+    'source/*.{ico,webmanifest}',
   ], {
     base: 'source'
   })
@@ -101,7 +104,6 @@ const copy = (done) => {
 
 const clean = () => {
   return del('build');
-  //return del('build/**/*.*');
 };
 
 // Server
@@ -148,13 +150,6 @@ export const build = gulp.series(
     sprite,
     createWebp
   ),
-);
-
-// Start
-
-export const start = gulp.series(
-  build,
-  server,
 );
 
 // Default

@@ -1,7 +1,7 @@
 .intro {
   width: 100%;
   min-height: 237px;
-  padding: @menu-height+24px 0 0 0;
+  padding-top: 90px;
   background-color: @grey-blue-color;
   background-image: url("../img/intro/intro-small.jpg");
   background-repeat: no-repeat;
@@ -62,6 +62,7 @@
     background-image: url("../img/intro/intro-medium.jpg");
     background-position: top center;
     background-size: auto;
+    padding-top: 110px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro/intro-medium@2x.jpg");
@@ -85,18 +86,20 @@
       min-height: 545px;
       width: 100%;
     }
+  }
 
-    .intro__wrapper-inner {
-      &--main-page {
-        align-items: flex-start;
-      }
+  .intro__wrapper-inner {
+    min-height: 330px;
+
+    &--main-page {
+      align-items: flex-start;
     }
   }
 
   .intro__title {
     .mixin-set-family-font(50px, 68px, 300);
-    padding-top: 88px;
-    padding-bottom: 58px;
+    padding-top: 67px;
+    padding-bottom: 8px;
 
     &--main-page {
       .mixin-set-family-font(40px, 48px, 300);
@@ -127,9 +130,13 @@
     }
   }
 
+  .intro__wrapper-inner {
+    min-height: 284px;
+  }
+
   .intro__title {
     .mixin-set-family-font(50px, 68px, 300);
-    padding-top: 80px;
-    padding-bottom: 88px;
+    padding-top: 60px;
+    padding-bottom: 8px;
   }
 }
