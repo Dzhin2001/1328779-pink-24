@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 21px;
+  padding-top: 5px;
   padding-bottom: 18px;
 }
 
@@ -12,6 +12,7 @@
   background-color: transparent;
   color: @white-color;
   .mixin-behavior-logo();
+  padding-top: 17px;
 }
 
 .main-nav__icon-small {
@@ -30,6 +31,7 @@
   .mixin-reset-margin();
   border: none;
   .mixin-behavior-menu();
+  padding-top: 15px;
 
   &--no-js {
     display: none;
@@ -96,8 +98,12 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    padding-top: 43px;
-    padding-bottom: 40px;
+    padding-top: 27px;
+    padding-bottom: 39px;
+  }
+
+  .main-nav__logo-link {
+    padding-top: 0;
   }
 
   .main-nav__icon-small {
@@ -120,8 +126,12 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     justify-content: normal;
-    padding-top: 29px;
-    padding-bottom: 29px;
+    padding-top: 27px;
+    padding-bottom: 30px;
+  }
+
+  .main-nav__logo-link {
+    padding-bottom: 9px;
   }
 
   .main-nav__icon-small,
@@ -163,7 +173,7 @@
   .main-nav__link {
     position: relative;
     text-transform: none;
-    .mixin-set-family-font(18px, 24px, 400);
+    .mixin-set-family-font(18px, 18px, 400);
     padding: 13px 0;
 
     &--active::after {

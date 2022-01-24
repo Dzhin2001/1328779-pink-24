@@ -2,6 +2,11 @@
   //
 }
 
+.upload__editor {
+  .mixin-flex-column(normal);
+  padding: 40px 0 15px 0;
+}
+
 .upload__description {
   position: relative;
   .mixin-fill-background(@white-color, 0);
@@ -9,8 +14,8 @@
   color: @dark-blue-color;
   .mixin-flex-column();
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 22px;
+  padding-bottom: 41px;
 }
 
 .upload__form {
@@ -22,11 +27,6 @@
 
 .upload__photo {
   .mixin-flex-column();
-}
-
-.upload__editor {
-  .mixin-flex-column(normal);
-  padding: 40px 20px 40px 20px;
 }
 
 .upload__list {
@@ -45,22 +45,21 @@
 
   &--crop {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 3px;
+    left: calc(50% - 103px);
+    //transform: translateX(50%) translateX(-5px) translateY(3px);
   }
 
   &--fill {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 3px;
+    left: calc(50% - 22px); //118
   }
 
   &--contrast {
     position: absolute;
-    top: 0;
-    left: 100%;
-    transform: translateX(-100%);
+    top: 8px;
+    left: calc(50% + 53px);
   }
 
   &--active {
@@ -90,7 +89,7 @@
   background-color: @dark-blue-color;
   height: 2px;
   min-width: 240px;
-  margin: 60px auto 20px auto;
+  margin: 86px auto 20px auto;
   display: none;
 
   &--active {
@@ -103,7 +102,7 @@
     height: 2px;
     width: 100vw;
     left: 50%;
-    bottom: -34px;
+    bottom: -35px;
     transform: translateX(-50%);
     background-color: fade(@dark-blue-color, 10%);
   }
@@ -127,12 +126,12 @@
 }
 
 .upload__buttons {
-  padding-top: 34px;
+  padding-top: 47px;
 }
 
 .upload__button-load,
 .upload__button-cancel {
-  .mixin-set-family-font(18px, 48px, 700);
+  .mixin-set-family-font(18px, 47px, 700);
   width: 100%;
   border-radius: 30px;
   background-color: transparent;

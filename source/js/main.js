@@ -6,6 +6,36 @@ document.addEventListener('DOMContentLoaded', function() {
     navToggle.classList.toggle('main-nav__toggle--closed');
   });
 
+  // form
+  let modalToggle = function() {
+    document.querySelector('.modal-container').classList.toggle('modal-container--close');
+  }
+  document.getElementById('button-error').onclick = modalToggle;
+  document.getElementById('button-success').onclick = modalToggle;
+
+  document.querySelector('.form__form').onsubmit = function() {
+    /* do what you want with the form */
+    let valid = true;
+    if(document.getElementById('input__surname').value.length == 0) {
+      valid = false;
+    }
+    if(document.getElementById('input__first-name').value.length == 0) {
+      valid = false;
+    }
+    let r = /^\w+@\w+\.\w{2,4}$/i;
+    if (!r.test(document.getElementById('input__email').value)) {
+      valid = false;
+    }
+
+    let windowModal = document.querySelector('.modal');
+    windowModal.classList.toggle('modal--success', valid);
+    modalToggle();
+
+    // You must return false to prevent the default form behavior
+    return false;
+    //return valid;
+  }
+
   // map
   let center = [59.938635, 30.323122];
   let navMain = document.querySelector('.contacts__map');
