@@ -1,12 +1,10 @@
 .success {
   display: flex;
   flex-direction: column;
-  background-color: @grey-color;
-  box-shadow: 0 4px 4px fade(@black-color, 25%);
 }
 
 .success__title {
-  background-color: @white-color;
+  display: block;
   .mixin-set-family-font(18px, 24px, 700);
   color: @dark-blue-color;
   text-align: center;
@@ -15,17 +13,35 @@
 }
 
 .success__description {
-  background-color: @white-color;
+  display: block;
   .mixin-set-family-font(14px, 24px, 400);
   color: @dark-blue-color;
   text-align: center;
   margin: 0;
-  padding: 20px 40px 20px 40px;
+  padding: 20px;
+}
+
+.success__wrapper {
+  background-color: @grey-color;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 50px 22px;
 }
 
 .success__button {
+  display: block;
   background-color: @elf-color;
   .mixin-set-family-font(18px, 58px, 700);
   color: @white-color;
-  margin: 50px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .success__title {
+    .mixin-set-family-font(30px, 40px, 700);
+  }
+
+  .success__button {
+    max-width: 296px;
+  }
 }
