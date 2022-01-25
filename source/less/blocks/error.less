@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   background-color: @white-color;
+
+  &--close {
+    display: none;
+  }
 }
 
 .error__title {
@@ -23,8 +27,23 @@
 }
 
 .error__button {
+  display: block;
   background-color: @elf-color;
   .mixin-set-family-font(18px, 58px, 700);
   color: @white-color;
-  margin: 50px 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 276px;
+}
+
+@media (min-width: @tablet-width) {
+  .error__title {
+    .mixin-set-family-font(30px, 40px, 700);
+  }
+
+  .error__button {
+    max-width: 296px;
+  }
 }

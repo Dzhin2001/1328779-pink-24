@@ -15,6 +15,8 @@
 }
 
 .table__rate {
+  position: relative;
+  overflow-x: hidden;
   background: @dark-blue-color;
   display: flex;
   flex-direction: column;
@@ -22,6 +24,20 @@
   align-items: center;
   color: @white-color;
   //border: 2px solid @dark-blue-color;
+
+  &--hits::after {
+    content: "ХИТ";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-26px, 12px) rotate(-45deg);
+    width: 105px;
+    min-height: 24px;
+    background-color: @pink-color;
+    color: @white-color;
+    .mixin-set-family-font(14px, 30px, 400);
+    text-align: center;
+  }
 }
 // ROWS
 .table__product {
@@ -44,7 +60,24 @@
   align-items: center;
   padding: 15px 15px 15px 17px;
   text-align: left;
+
+  &--yes > .table__icon-yes {
+    display: block;
+  }
+
+  &--yes > .table__icon-no {
+    display: none;
+  }
+
+  &--no > .table__icon-yes {
+    display: none;
+  }
+
+  &--no > .table__icon-no {
+    display: block;
+  }
 }
+
 // SPANS
 .table__tariff {
   display: block;

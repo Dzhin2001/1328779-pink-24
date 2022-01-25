@@ -11,7 +11,7 @@
       top: 0;
       right: 50%;
       transform: translateX(140px);
-      width: 130px;
+      width: 140px;
       min-height: 36px;
       background-color: @pink-color;
       color: @white-color;
@@ -33,9 +33,13 @@
 
 .photo__details {
   display: grid;
-  grid-template-rows: minmax(26px, max-content) minmax(54px, max-content) minmax(27px, max-content);
+  grid-template-rows: minmax(26px, max-content) minmax(25px, max-content) minmax(35px, max-content);
   background-color: @grey-color;
-  padding: 17px;
+  padding: 18px 10px 18px 17px;
+
+  &--panorama {
+    padding: 18px 10px 18px 17px;
+  }
 }
 
 .photo__author {
@@ -48,27 +52,45 @@
   .mixin-set-family-font(12px, 24px, 300);
   .mixin-reset-margin();
   color: @dark-blue-color;
+  text-transform: uppercase;
+  padding-left: 3px;
 }
 
 .photo__description {
   .mixin-set-family-font(14px, 24px, 400);
   .mixin-reset-margin();
   color: @dark-blue-color;
+  margin-top: -1px;
+
+  &--panorama {
+    margin-top: 0;
+  }
 }
 
 .photo__like {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   justify-content: flex-end;
   background-color: @grey-color;
+  text-transform: uppercase;
   color: @pink-color;
   margin: 0;
+  padding-top: 8px;
+
+  &--panorama {
+    padding-top: 8px;
+  }
 }
 
 .photo__count {
   .mixin-reset-margin();
   .mixin-set-family-font(12px, 24px, 400);
-  padding-left: 17px;
+  padding-left: 18px;
+
+  &--panorama {
+    padding-left: 19px;
+  }
 }
 
 .photo__button-like {

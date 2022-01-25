@@ -4,12 +4,20 @@
   .mixin-reset-list();
 }
 
+.social__icon {
+  color: @pink-color;
+
+  &--youtube {
+    margin-top: 1px;
+    margin-left: 4px;
+  }
+}
+
 .social__link {
-  .mixin-flex-column(center, center);
-  width: 48px;
-  height: 48px;
+  .mixin-flex-row(center, center);
+  width: 54px;
+  height: 54px;
   margin: 4px;
-  .mixin-svg-color(@pink-color);
   border: 3px solid fade(@dark-blue-color, 10%);
   border-radius: 50%;
 
@@ -24,5 +32,15 @@
   &:active:not(&--active) {
     border: 3px solid fade(@dark-blue-color, 10%);
     opacity: 30%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__link {
+    margin-right: 3px;
+
+    &:first-child {
+      margin-left: 3px;
+    }
   }
 }
