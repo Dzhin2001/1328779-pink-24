@@ -53,10 +53,10 @@
 
 .reviews__prev {
   position: absolute;
-  left: 0;
-  top: 50%;
-  width: 16px;
-  height: 16px;
+  left: 26px;
+  top: calc(50% + 17px);
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid transparent;
@@ -67,10 +67,10 @@
 
 .reviews__next {
   position: absolute;
-  right: 0;
-  top: 50%;
-  width: 16px;
-  height: 16px;
+  right: 26px;
+  top: calc(50% + 17px);
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   border: none;
   border-top: 2px solid transparent;
@@ -110,8 +110,8 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding-top: 200px;
-    padding-bottom: 40px;
+    padding-top: 172px;
+    padding-bottom: 32px;
 
     &::before {
       z-index: -1;
@@ -124,6 +124,11 @@
       transform: translateX(-50%);
       background: url("../img/quotes.svg") no-repeat center;
     }
+  }
+
+  .reviews__item {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   .reviews__dots {
@@ -140,5 +145,6 @@
 
   .reviews__author-about {
     .mixin-set-family-font(18px, 30px, 400);
+    padding-top: 2px;
   }
 }

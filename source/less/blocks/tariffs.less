@@ -38,3 +38,25 @@
     display: none;
   }
 }
+
+
+@media (min-width: @desktop-width) {
+  .tariffs {
+    .mixin-background-incline(@grey-color, -4.8deg, 84%);
+    padding: 0;
+  }
+
+  .tariffs__wrapper {
+    min-height: 535px;
+    padding-top: 158px;
+  }
+
+  .tariffs__table {
+    position: static;
+    transform: translateX(0);
+  }
+
+  .tariffs__dots {
+    display: none;
+  }
+}

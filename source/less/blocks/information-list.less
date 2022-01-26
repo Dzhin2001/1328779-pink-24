@@ -29,14 +29,14 @@
 
 @media (min-width: @tablet-width) {
   .information-list {
-    padding: 0 0 0 0;
+    padding: 0;
   }
 
   .information-list__item {
     align-items: start;
     padding-top: 35px;
 
-    &:first-child {
+    &:nth-child(1) {
       padding-top: 29px;
     }
 
@@ -57,33 +57,62 @@
 
 @media (min-width: @desktop-width) {
   .information-list {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 28px;
+    padding-top: 23px;
   }
 
   .information-list__item {
-    align-items: center;
+    align-items: normal;
+    padding: 0;
+
+    &:nth-child(1) {
+      padding: 0;
+    }
+
+    &:nth-child(2) {
+      padding: 0;
+    }
+
+    &:nth-child(1) .information-list__title {
+      padding-left: 35px;
+    }
+
+    &:nth-child(3) .information-list__title{
+      padding-right: 35px;
+    }
+
+    &:nth-child(1) .information-list__description {
+      padding-left: 30px;
+      padding-right: 25px;
+    }
+
+    &:nth-child(3) .information-list__description {
+      padding-left: 25px;
+      padding-right: 30px;
+    }
   }
 
   .information-list__wrapper {
     position: relative;
     overflow-y: hidden;
-    .mixin-flex-column();
-    min-width: 300px;
+    .mixin-flex-column(normal);
   }
 
   .information-list__example {
     position: relative;
     z-index: 1;
-    margin-bottom: -80px;
+    .mixin-flex-column();
+    margin-bottom: -85px;
 
     &::after {
       content: "";
       z-index: 2;
       position: absolute;
-      bottom: 80px;
+      bottom: 85px;
       left: 50%;
-      width: 300px;
+      width: 292px;
       height: 17px;
       transform: translateX(-50%) translateY(50%);
       border-radius: 50%;
@@ -95,12 +124,14 @@
 
   .information-list__title {
     .mixin-set-family-font(30px, 30px, 700);
+    text-align: center;
+    padding: 56px 30px 0 30px;
   }
 
   .information-list__description {
     .mixin-set-family-font(18px, 30px, 400);
     text-align: center;
-    padding-top: 12px;
+    padding: 22px 30px 0 30px;
   }
 
   .information-list__description-add {
