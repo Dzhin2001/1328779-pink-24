@@ -1,6 +1,6 @@
 .reviews {
   position: relative;
-  padding-top: 40px;
+  padding-top: 41px;
   padding-bottom: 15px;
 }
 
@@ -34,8 +34,12 @@
   .mixin-set-family-font(14px, 30px, 400);
   color: @dark-blue-color;
   margin: 0;
-  padding-top: 15px;
+  padding-top: 13px;
   text-align: center;
+}
+
+.reviews__dots {
+  padding-top: 34px;
 }
 
 .reviews__nav {
@@ -81,12 +85,25 @@
     flex-direction: column-reverse;
   }
 
-  .reviews__author-name {
-    .mixin-set-family-font(20px, 30px, 700);
+  .reviews__text {
+    .mixin-set-family-font(18px, 30px, 400);
+    padding-top: 12px;
+  }
+
+  .reviews__author {
+    padding-top: 36px;
   }
 
   .reviews__author-about {
     display: block;
+  }
+
+  .reviews__author-name {
+    .mixin-set-family-font(20px, 30px, 700);
+  }
+
+  .reviews__dots {
+    padding-top: 38px;
   }
 }
 

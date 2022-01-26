@@ -1,11 +1,12 @@
 .tariffs {
   .mixin-flex-column();
-  .mixin-background-incline(@grey-color);
-  padding: 160px 0 0 0;
+  .mixin-background-incline(@grey-color, -3.5deg, 90.5%);
+  padding: 132px 0 0 0;
 }
 
 .tariffs__wrapper {
   overflow-x: hidden;
+  min-height: 379px;
 }
 
 .tariffs__table {
@@ -14,14 +15,23 @@
   .mixin-flex-column();
 }
 
+.tariffs__dots {
+  padding-top: 46px;
+}
+
 @media (min-width: @tablet-width) {
+  .tariffs {
+    .mixin-background-incline(@grey-color, -3.5deg, 89%);
+    padding: 106px 0 0 0;
+  }
+
+  .tariffs__wrapper {
+    min-height: 288px;
+  }
+
   .tariffs__table {
     position: static;
     transform: translateX(0);
-  }
-
-  .tariffs {
-    padding-bottom: 70px;
   }
 
   .tariffs__dots {

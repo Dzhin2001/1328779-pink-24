@@ -5,9 +5,7 @@
 }
 
 .facts__wrapper {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 27px;
   padding-bottom: 20px;
 }
 
@@ -15,7 +13,7 @@
   background-image: url("../img/timer.svg");
   background-repeat: no-repeat;
   background-position: left;
-  background-size: contain;
+  background-size: 238px 276px;
   .mixin-flex-column(flex-end);
 }
 
@@ -31,12 +29,23 @@
   .mixin-set-family-font(30px, 36px, 700);
   color: @black-color;
   margin: 0;
+  padding-top: 20px;
+}
+
+.facts__title-add {
+  display: block;
 }
 
 .facts__description {
   .mixin-set-family-font(14px, 24px, 400);
   color: @dark-blue-color;
   margin: 0;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+.facts__description-add {
+  display: block;
 }
 
 .facts__link {
@@ -44,6 +53,7 @@
   color: @pink-color;
   text-decoration: underline;
   .mixin-behavior(@pink-color);
+  padding-top: 10px;
 }
 
 @media (min-width: @tablet-width) {
@@ -62,7 +72,15 @@
     width: 60%;
   }
 
+  .facts__title-add {
+    display: inline;
+  }
+
   .facts__description {
     .mixin-set-family-font(18px, 30px, 400);
+  }
+
+  .facts__description-add {
+    display: inline;
   }
 }
